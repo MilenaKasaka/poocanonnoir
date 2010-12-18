@@ -1,0 +1,17 @@
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\Initialisation.baml
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\MainWindow.baml
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\Initialisation.g.cs
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\App.g.cs
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir_MarkupCompile.cache
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.g.resources
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.Properties.Resources.resources
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\Debug\canon_noir.exe
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\Debug\canon_noir.pdb
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\Debug\mWrapper.dll
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\Debug\mWrapper.pdb
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.exe
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.pdb
