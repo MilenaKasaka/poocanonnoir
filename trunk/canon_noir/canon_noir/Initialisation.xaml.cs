@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using mWrapper;
 
 namespace canon_noir
 {
@@ -18,10 +19,12 @@ namespace canon_noir
     /// </summary>
     public partial class Initialisation : Window
     {
+        WrapperMoteur moteur;
 
         public Initialisation()
         {
             InitializeComponent();
+            moteur = new WrapperMoteur();
         }
 
         private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
