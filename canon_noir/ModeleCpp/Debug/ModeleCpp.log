@@ -1,4 +1,4 @@
-﻿La génération a démarré 14/12/2010 13:15:36.
+﻿La génération a démarré 20/12/2010 17:22:36.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\ModeleCpp.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
@@ -16,6 +16,7 @@
          Debug\ChoixCouleur.obj
          Debug\Facade.obj
          Debug\Moteur.obj
+         LINK : C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
             Création de la bibliothèque C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib et de l'objet C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.exp
          ModeleCpp.vcxproj -> C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll
        Manifest:
@@ -27,4 +28,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.41
+Temps écoulé 00:01:00.76
