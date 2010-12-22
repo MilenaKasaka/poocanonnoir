@@ -38,6 +38,9 @@ class Moteur
 		int getEtatCourant();
 		void setLancerDe(int nb);
 		int getLancerDe();
+		int getNbJoueurs();
+		// Initialise le vecteur des joueurs
+		void initJoueurs(int size);
 		Map getMap();
 		vector<pair <int,int> > getCasesAccessibles();
 		TypeBateau getTypeBateau();

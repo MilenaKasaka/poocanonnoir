@@ -47,6 +47,16 @@ int Moteur::getLancerDe()
 	return 0;
 }
 
+int Moteur::getNbJoueurs()
+{
+	return joueurs.size();
+}
+
+void Moteur::initJoueurs(int size)
+{
+	joueurs.resize(size);
+}
+
 Map Moteur::getMap()
 {
 	return map;

@@ -1,18 +1,16 @@
-﻿La génération a démarré 20/12/2010 17:23:45.
-     1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 3 (build cible(s)).
+﻿La génération a démarré 22/12/2010 20:20:24.
+     1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\mWrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       GenerateTargetFrameworkMonikerAttribute:
+       La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
        ClCompile:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\mWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt Stdafx.cpp /clr:nostdlib 
-         Stdafx.cpp
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\mWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp mWrapper.cpp /clr:nostdlib 
-         AssemblyInfo.cpp
+         Toutes les sorties sont à jour.
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\mWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt mWrapper.cpp /clr:nostdlib 
          mWrapper.cpp
-         Génération de code en cours...
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /analyze- /errorReport:prompt "C:\Users\Sophie\AppData\Local\Temp\.NETFramework,Version=v4.0.AssemblyAttributes.cpp"
-         .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+         Toutes les sorties sont à jour.
        ResourceCompile:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\app.res" app.rc 
+         Toutes les sorties sont à jour.
        Link:
          D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\mWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
          Debug\AssemblyInfo.obj
@@ -30,4 +28,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:34.96
+Temps écoulé 00:00:06.03

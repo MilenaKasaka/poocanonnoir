@@ -19,6 +19,12 @@ int Facade::getNbJoueurs()
 	return 0;
 }
 
+void Facade::setNbJoueurs(int size)
+{
+	moteur->initJoueurs(size);
+}
+
+
 int Facade::getTypeBateau(int joueur, int bateau)
 {
 	return 0;
