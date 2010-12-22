@@ -1,0 +1,3 @@
+Ce serait bien que tu mettes tes fichiers sources dans ce dossier.
+Comme çà je pourrais les intégrer au fur et à mesure au reste du projet.
+Merci d'avance.
