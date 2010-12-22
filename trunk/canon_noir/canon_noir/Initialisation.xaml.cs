@@ -39,6 +39,7 @@ namespace canon_noir
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            //moteur.setNbJoueurs(comboBox1.GetValue());
             MainWindow mw = new MainWindow();
             mw.Show();
             this.Close();

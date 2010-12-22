@@ -66,6 +66,7 @@
     <ClCompile Include="Bateau.cpp" />
     <ClCompile Include="ChoixCouleur.cpp" />
     <ClCompile Include="Facade.cpp" />
+    <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Moteur.cpp" />
   </ItemGroup>
   <ItemGroup>
