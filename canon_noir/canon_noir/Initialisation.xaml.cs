@@ -24,7 +24,8 @@ namespace canon_noir
         public Initialisation()
         {
             InitializeComponent();
-            moteur = new WrapperMoteur();
+            // Provoque une exception
+            //moteur = new WrapperMoteur();
         }
 
         private void comboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -39,7 +40,7 @@ namespace canon_noir
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            //moteur.setNbJoueurs(comboBox1.GetValue());
+            //moteur.setNbJoueurs(Int32.Parse(comboBox1.SelectedValue.ToString()));
             MainWindow mw = new MainWindow();
             mw.Show();
             this.Close();

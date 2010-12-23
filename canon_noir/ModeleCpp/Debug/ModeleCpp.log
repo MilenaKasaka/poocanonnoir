@@ -1,13 +1,10 @@
-﻿La génération a démarré 22/12/2010 20:16:44.
+﻿La génération a démarré 23/12/2010 22:10:50.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
-         Mise à jour de l'horodatage "Debug\ModeleCpp.unsuccessfulbuild".
+         Création de "Debug\ModeleCpp.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Facade.cpp Joueur.cpp Moteur.cpp
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Moteur.cpp
          Moteur.cpp
-         Joueur.cpp
-         Facade.cpp
-         Génération de code en cours...
        Link:
          D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ModeleCpp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib" /MACHINE:X86 /DLL Debug\AttenteNbJoueurs.obj
          Debug\Bateau.obj
@@ -15,6 +12,7 @@
          Debug\Facade.obj
          Debug\Joueur.obj
          Debug\Moteur.obj
+         LINK : C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
             Création de la bibliothèque C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib et de l'objet C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.exp
          ModeleCpp.vcxproj -> C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll
        Manifest:
@@ -26,4 +24,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:09.50
+Temps écoulé 00:00:11.30
