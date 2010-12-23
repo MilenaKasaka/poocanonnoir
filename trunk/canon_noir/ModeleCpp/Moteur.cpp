@@ -55,6 +55,7 @@ int Moteur::getNbJoueurs()
 void Moteur::initJoueurs(int size)
 {
 	joueurs.resize(size);
+	//cout << "Initialisation à " << size << " joueurs" <<endl;
 }
 
 Map Moteur::getMap()
