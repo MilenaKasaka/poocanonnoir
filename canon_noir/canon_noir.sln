@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "canon_noir", "canon_noir\canon_noir.csproj", "{CBB8B85A-98D6-493C-9AF1-61F4E0332B11}"
 	ProjectSection(ProjectDependencies) = postProject
 		{3B12F70E-FEF7-451B-9CB7-954FBF779F7D} = {3B12F70E-FEF7-451B-9CB7-954FBF779F7D}
+		{0234E79A-CEF9-4BE8-AEA2-63C64B2C4905} = {0234E79A-CEF9-4BE8-AEA2-63C64B2C4905}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mWrapper", "mWrapper\mWrapper.vcxproj", "{3B12F70E-FEF7-451B-9CB7-954FBF779F7D}"

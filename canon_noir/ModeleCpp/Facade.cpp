@@ -1,7 +1,13 @@
 #include "Facade.h"
 
+Facade::Facade()
+{
+	initMoteur();
+}
+
 void Facade::initMoteur()
 {
+	moteur = new Moteur();
 }
 
 int Facade::getNbLigne()
