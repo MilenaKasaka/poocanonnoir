@@ -15,3 +15,5 @@ C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\bin\Debug\mWrapper.pdb
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.exe
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\canon_noir\obj\x86\Debug\canon_noir.pdb
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\canon_noir.exe
+C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\canon_noir.pdb

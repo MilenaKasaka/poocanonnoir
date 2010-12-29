@@ -25,6 +25,8 @@ class DLL Facade
 
 	public :
 
+		Facade();
+
 		void initMoteur();
 
 		int getNbLigne();
