@@ -1,4 +1,7 @@
+#include <iostream>
 #include "Joueur.h"
+
+using namespace std;
 
 TypeBateau Joueur::getTypeBateau()
 {
@@ -11,4 +14,5 @@ void Joueur::initBateaux(int nbJoueurs)
 		bateaux.resize(2);
 	else
 		bateaux.resize(1);
+	cout << "initBateaux pour " << nbJoueurs << " joueurs" << endl;
 }

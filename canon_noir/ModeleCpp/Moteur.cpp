@@ -55,6 +55,10 @@ int Moteur::getNbJoueurs()
 void Moteur::initJoueurs(int size)
 {
 	joueurs.resize(size);
+	for (int i=0 ; i<size ; i++)
+	{
+		joueurs[i].initBateaux(size);
+	}
 	//cout << "Initialisation à " << size << " joueurs" <<endl;
 }
 

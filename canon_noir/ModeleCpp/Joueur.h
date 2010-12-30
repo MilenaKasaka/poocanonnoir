@@ -12,8 +12,8 @@ class Joueur
 		vector<Bateau> bateaux;
 
 	public :
-
 		TypeBateau getTypeBateau();
+
 		/*
 		Initialise le nombre de bateaux en fonction du nombre de joueurs :
 		2 si le nombre de joueurs est de 2
