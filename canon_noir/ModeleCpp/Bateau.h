@@ -18,18 +18,6 @@ class Bateau
 		int nbTresor;
 		TypeBateau type;
 
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 		Bateau();
 		void init_port(int port);

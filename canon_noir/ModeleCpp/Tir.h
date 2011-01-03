@@ -12,23 +12,12 @@ class Tir : public State
 		int angle;
 		int puissance;
 
-	protected :
-
-
-	public :
-
-
-	private :
-
 		bool calculResTir();
-
-	protected :
-
 
 	public :
 
 		Tir();
-		abstract void gerer();
+		virtual void gerer();
 		virtual void initialiserTir(int angle, int puissance);
 
 }; 

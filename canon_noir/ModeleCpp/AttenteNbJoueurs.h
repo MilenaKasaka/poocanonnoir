@@ -9,19 +9,6 @@ class AttenteNbJoueurs : public State
 {
 	private :
 
-
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 
 		void gerer();

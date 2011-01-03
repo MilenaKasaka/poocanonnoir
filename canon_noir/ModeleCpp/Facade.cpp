@@ -10,6 +10,11 @@ void Facade::initMoteur()
 	moteur = new Moteur();
 }
 
+void Facade::execute()
+{
+	moteur->requete();
+}
+
 int Facade::getNbLigne()
 {
 	return 0;
@@ -30,19 +35,19 @@ void Facade::setNbJoueurs(int size)
 	moteur->initJoueurs(size);
 }
 
-
 int Facade::getTypeBateau(int joueur, int bateau)
 {
 	return 0;
 }
 
-void Facade::execute()
+int Facade::getXBateau(int joueur)
 {
+	return 0;
 }
 
-pair<int,int> Facade::getPosBateaux(int joueur)
+int Facade::getYBateau(int joueur)
 {
-	return make_pair(0,0);
+	return 0;
 }
 
 int Facade::getNbTresors(int joueur)
@@ -59,15 +64,19 @@ void Facade::initialiserTir(int angle, int puissance)
 {
 }
 
-int Facade::getLancerDe()
+int Facade::getDe1()
 {
 	return 0;
 }
 
-vector <pair <int,int> > Facade::getCasesAccessibles()
+int Facade::getDe2()
 {
-	vector <pair <int,int> > v;
-	return v;
+	return 0;
+}
+
+bool Facade::estAccessible(int x,int y)
+{
+	return moteur->estAccessible(x,y);
 }
 
 bool Facade::dispoLancerDe()

@@ -82,7 +82,7 @@ Map Moteur::getMap()
 bool Moteur::estAccessible(int x, int y)
 {
 	if (etatCourant != DEPLACEMENT_BATEAU) return false;
-	pair<x,y> posBateau = getPosJoueurCourant();
+	pair<int,int> posBateau = getPosJoueurCourant();
 	if(x >= LARGEUR_PLATEAU || x < 0 || y >= LARGEUR_PLATEAU || y < 0) return false; 
 	return false;
 }

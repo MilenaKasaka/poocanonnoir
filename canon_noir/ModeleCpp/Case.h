@@ -9,29 +9,19 @@
 /// si type = TRESOR alors nbTresor>=0,
 /// sinon nbTresor = 0
 /// </remarks>
+#include "enumerations.h"
+
 class Case
 {
 	private :
 
 		int nbTresor;
 
-	protected :
-
-
 	public :
 
-
-	private :
-
-
-	protected :
-
-
-	public :
-
-		virtual void prendreTresor();
-		Case(Type t, int n);
-		virtual TypeCase getType();
+		void prendreTresor();
+		Case(TypeCase t, int n);
+		TypeCase getType();
 
 }; 
 
