@@ -4,7 +4,11 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include <utility>
 #include "enumerations.h"
+
+using namespace std;
+
 class Bateau
 {
 	private :
@@ -33,6 +37,7 @@ class Bateau
 		void enleverTresor();
 		void changerPosition(int x, int y);
 		TypeBateau getType();
+		pair<int,int> getPosition();
 
 }; 
 

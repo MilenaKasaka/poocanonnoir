@@ -6,15 +6,21 @@
 //------------------------------------------------------------------------------
 
 /// <remarks>Les cases sont stockées dans un vecteur à 2 dimensions</remarks>
+#include <vector>
+#include "Case.h"
+#include "enumerations.h"
+
+using namespace std;
+
 class Map
 {
 	private :
-
+		vector<Case> cases;
 
 
 	public :
-
-		/*TypeCase getTypeCase(int x, int y);*/
+		Map();
+		TypeCase getTypeCase(int x, int y);
 
 }; 
 
