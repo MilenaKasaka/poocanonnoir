@@ -1,5 +1,14 @@
 #include "Moteur.h"
 
+Moteur::Moteur()
+{
+}
+
+void Moteur::initMoteur()
+{
+	this->changerEtat(ATTENTE_NB_JOUEURS);
+}
+
 bool Moteur::dispoLancerDe()
 {
 	return (etatCourant == LANCER_DE);
@@ -27,6 +36,7 @@ bool Moteur::dispoReglageTir()
 
 void Moteur::requete()
 {
+	etats[etatCourant].gerer();
 }
 
 void Moteur::changerEtat(int etat)
@@ -38,13 +48,14 @@ int Moteur::getEtatCourant()
 	return 0;
 }
 
-void Moteur::setLancerDe(int nb)
+void Moteur::setLancerDe(pair<int,int> lancer)
 {
+	resLancerDe = lancer;
 }
 
-int Moteur::getLancerDe()
+pair<int,int> Moteur::getLancerDe()
 {
-	return 0;
+	return resLancerDe;
 }
 
 int Moteur::getNbJoueurs()
@@ -54,12 +65,13 @@ int Moteur::getNbJoueurs()
 
 void Moteur::initJoueurs(int size)
 {
-	joueurs.resize(size);
+	/*joueurs.resize(size);
 	for (int i=0 ; i<size ; i++)
 	{
 		joueurs[i].initBateaux(size);
-	}
+	}*/
 	//cout << "Initialisation à " << size << " joueurs" <<endl;
+	this->changerEtat(LANCER_DE);
 }
 
 Map Moteur::getMap()
@@ -67,14 +79,22 @@ Map Moteur::getMap()
 	return map;
 }
 
-vector<pair <int,int> > Moteur::getCasesAccessibles()
+bool Moteur::estAccessible(int x, int y)
 {
-	return casesAccessibles;
+	if (etatCourant != DEPLACEMENT_BATEAU) return false;
+	pair<x,y> posBateau = getPosJoueurCourant();
+	if(x >= LARGEUR_PLATEAU || x < 0 || y >= LARGEUR_PLATEAU || y < 0) return false; 
+	return false;
 }
 
 TypeBateau Moteur::getTypeBateau()
 {
 	return joueurs[joueurCourant].getTypeBateau();
+}
+
+pair<int,int> Moteur::getPosJoueurCourant()
+{
+	return joueurs[joueurCourant].getPosBateau();
 }
 
 /*TypeCase Moteur::getTypeCase(int x, int y)
