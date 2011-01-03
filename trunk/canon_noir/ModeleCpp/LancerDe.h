@@ -4,28 +4,25 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include <vector>
+#include <time.h>
+#include <utility>
+#include "Moteur.h"
+
+using namespace std;
 
 class LancerDe : public State
 {
-	private :
-
-
-	protected :
-
-
-	public :
-
 
 	private :
 
 		vector <pair <int,int> > casesAccessibles();
-
-	protected :
-
+		void tirerDes();
+		Moteur* moteur;
 
 	public :
 
-		override void gerer();
-
+		LancerDe(Moteur* m);
+		void gerer();
 }; 
 

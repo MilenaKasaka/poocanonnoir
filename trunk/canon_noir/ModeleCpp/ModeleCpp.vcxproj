@@ -64,10 +64,14 @@
   <ItemGroup>
     <ClCompile Include="AttenteNbJoueurs.cpp" />
     <ClCompile Include="Bateau.cpp" />
+    <ClCompile Include="Case.cpp" />
     <ClCompile Include="ChoixCouleur.cpp" />
     <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="LancerDe.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="Moteur.cpp" />
+    <ClCompile Include="State.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttenteNbJoueurs.h" />

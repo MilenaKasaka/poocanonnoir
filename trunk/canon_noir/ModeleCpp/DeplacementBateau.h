@@ -9,19 +9,6 @@ class DeplacementBateau : public State {abstract}
 {
 	private :
 
-
-	protected :
-
-
-	public :
-
-
-	private :
-
-
-	protected :
-
-
 	public :
 
 		DeplacementBateau();
