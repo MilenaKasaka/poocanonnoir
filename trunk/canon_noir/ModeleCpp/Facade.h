@@ -1,7 +1,5 @@
 ﻿#pragma once
 
-#include <vector>
-#include <utility>
 #include "enumerations.h"
 #include "Moteur.h"
 
@@ -28,6 +26,7 @@ class DLL Facade
 		Facade();
 
 		void initMoteur();
+		void execute();
 
 		int getNbLigne();
 		int getNbColonnes();
@@ -35,13 +34,14 @@ class DLL Facade
 		void setNbJoueurs(int size);
 
 		int getTypeBateau(int joueur, int bateau);
-		void execute();
-		pair<int,int> getPosBateaux(int joueur);
+		int getXBateau(int joueur);
+		int getYBateau(int joueur);
 		int getNbTresors(int joueur);
 		int getTypeCase(int x, int y);
 		void initialiserTir(int angle, int puissance);
-		int getLancerDe();
-		vector <pair <int,int> > getCasesAccessibles();
+		int getDe1();
+		int getDe2();
+		bool estAccessible(int x, int y);
 		
 		// Actions disponibles sur l'interface
 		bool dispoLancerDe();

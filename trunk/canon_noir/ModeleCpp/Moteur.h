@@ -4,6 +4,7 @@
 
 #include "enumerations.h"
 #include "State.h"
+#include <utility>
 #include "Map.h"
 #include "Joueur.h"
 
@@ -14,7 +15,7 @@ class Moteur
 	private :
 
 		int joueurCourant;
-		int resLancerDe;
+		pair<int,int> resLancerDe;
 		State* etats;
 		int etatCourant;
 		bool initialise; 
@@ -26,6 +27,9 @@ class Moteur
 
 	public :
 
+		Moteur();
+		void initMoteur();
+
 		// Actions disponibles sur l'interface
 		bool dispoLancerDe();
 		bool dispoNbJoueurs();
@@ -36,14 +40,16 @@ class Moteur
 		void requete();
 		void changerEtat(int etat);
 		int getEtatCourant();
-		void setLancerDe(int nb);
-		int getLancerDe();
+		void setLancerDe(pair<int,int> lance);
+		pair<int,int> getLancerDe();
 		int getNbJoueurs();
 		// Initialise le vecteur des joueurs
 		void initJoueurs(int size);
 		Map getMap();
-		vector<pair <int,int> > getCasesAccessibles();
+		// Prend en compte l'état du moteur
+		bool estAccessible(int x, int y);
 		TypeBateau getTypeBateau();
+		pair<int,int> getPosJoueurCourant();
 		//TypeCase getTypeCase(int x, int y);
 
 }; 

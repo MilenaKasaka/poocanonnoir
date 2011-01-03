@@ -1,4 +1,6 @@
 ﻿#include <vector>
+#include <iostream>
+#include <utility>
 #include "Bateau.h"
 
 using namespace std;
@@ -20,6 +22,8 @@ class Joueur
 		1 sinon
 		*/
 		void initBateaux(int nbJoueurs);
+
+		pair<int,int> getPosBateau();
 
 }; 
 
