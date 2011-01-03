@@ -61,15 +61,20 @@ public :
 		f->initialiserTir(angle,puissance);
 	}
 
-	int getLancerDe()
+	int getDe1()
 	{
-		return f->getLancerDe();
+		return f->getDe1();
 	}
 
-	/*vector<pair <int,int> > getCasesAccessibles()
+	int getDe2()
 	{
-		return f->getCasesAccessibles();
-	}*/
+		return f->getDe2();
+	}
+
+	bool estAccessible(int x, int y)
+	{
+		return f->estAccessible(x,y);
+	}
 
 	bool dispoLancerDe()
 	{
