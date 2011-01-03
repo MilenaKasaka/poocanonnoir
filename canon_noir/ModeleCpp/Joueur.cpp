@@ -1,4 +1,3 @@
-#include <iostream>
 #include "Joueur.h"
 
 using namespace std;
@@ -16,3 +15,9 @@ void Joueur::initBateaux(int nbJoueurs)
 		bateaux.resize(1);
 	cout << "initBateaux pour " << nbJoueurs << " joueurs" << endl;
 }
+
+pair<int,int> Joueur::getPosBateau()
+{
+	return bateaux[bateauCourant].getPosition();
+}
+
