@@ -54,3 +54,8 @@ TypeBateau Bateau::getType()
 {
 	return type;
 }
+
+pair<int,int> Bateau::getPosition()
+{
+	return make_pair(posX,posY);
+}
