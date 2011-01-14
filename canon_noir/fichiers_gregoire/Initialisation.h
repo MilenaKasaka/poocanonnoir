@@ -7,11 +7,20 @@
  *
  */
 
+#ifndef INIT
+#define INIT
+
+#include<ctime>
+
 #include "Etat.h"
+#include "Jeu.h"
 
 
 class Initialisation : public Etat {
 public:
+	Initialisation(Jeu* j);
 	bool initNbJoueurs(int n);
 	//int lancerDe(); //sera pour l'initialisation
 };
+
+#endif

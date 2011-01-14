@@ -13,7 +13,11 @@
 
 #include "Joueur.h"
 #include "Etat.h"
+#include "Initialisation.h"
+#include "Deplacement.h"
+#include "Fin.h"
 #include "Carte.h"
+#include "Constantes.h"
 
 using namespace std;
 
@@ -27,14 +31,16 @@ private:
 	
 public:
 	Jeu();
+	~Jeu();
 	bool initNbJoueurs(int n);
 	void incrJoueurCourant();
-	void setEtatCourant(int etat);
+	void setEtatCourant(int e);
 	Etat* obtEtat(int i);
 	Etat* obtEtatCourant();
 	Carte* obtCarte();
 	Joueur* obtJoueur(int i);
 	Joueur* obtJoueurCourant();
+	int obtNbJoueurs();
 	int obtIndJoueurCourant();
 };
 
