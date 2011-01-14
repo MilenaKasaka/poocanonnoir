@@ -6,14 +6,19 @@
  *  Copyright 2010 __MyCompanyName__. All rights reserved.
  *
  */
+#ifndef JOUEUR
+#define JOUEUR
 #include<utility>
+
+#include "Constantes.h"
+
 using namespace std;
 
 class Joueur {
 private:
 	pair<int,int> position;
 	pair<int,int> positionInit;//invariant !
-	int typeBateau;
+	TypeBateau type;
 	bool tresorSurBateau;
 	int nbTresorPort;//invariant !
 public:
@@ -23,6 +28,7 @@ public:
 	void deplacer(int i, int j);
 	int obtPositionI();
 	int obtPositionJ();
+	pair<int,int> obtPosition();
 	
 	bool mettreTresorBateau();
 	bool tresorBateau();
@@ -31,5 +37,8 @@ public:
 	bool dechargerTresor();
 	int obtNbTresorPort();
 	
+	bool recevoirTir();
+	
 	bool aGagne();
 };
+#endif

@@ -8,11 +8,24 @@
  */
 
 #include "Initialisation.h"
-#include "Jeu.h"
+//#include "Jeu.h"
+
+/*Initialisation::Initialisation(Jeu* j) {
+	jeu = j;
+}*/
+
+
+Initialisation::Initialisation(Jeu* j) : Etat(j) {
+	srand(time(NULL));
+}
 
 bool Initialisation::initNbJoueurs(int n) {
-	jeu->initNbJoueurs(n);
-	return true;
+	if (jeu->initNbJoueurs(n)) {
+		jeu->setEtatCourant(DEPLACEMENT);
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /*int Initialisation::lancerDe() {

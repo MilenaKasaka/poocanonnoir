@@ -12,7 +12,7 @@
 #include <list>
 #include <utility>
 
-//#include "Jeu.h"
+//#include "Jeu.h" // problème d'insertion circulaire
 #include "Constantes.h"
 class Jeu;
 
@@ -22,12 +22,20 @@ class Etat {
 protected:
 	Jeu* jeu;
 public:
+	Etat();
+	Etat(Jeu* j);
 	virtual bool initNbJoueurs(int n);
 	virtual int lancerDe();
 	virtual list<pair<int,int> > obtListeCasesAccessibles();
 	virtual bool deplacerBateau(int i, int j);
 	virtual int obtGagnant();
-	virtual bool execute();//
+	//virtual bool execute();
+	
+	virtual bool reglerDirectionTir(int i, int j);
+	virtual bool reglerTir(int puissance, int angle);
+	virtual pair<int,int> tirer();
+	virtual pair<int,int> calculerTir();
+	
 };
 
 #endif
