@@ -16,12 +16,16 @@ class Case
 	private :
 
 		int nbTresor;
+		TypeCase type;
 
 	public :
 
 		void prendreTresor();
 		Case(TypeCase t, int n);
 		TypeCase getType();
+		void setType(TypeCase t);
+		int getNbTresor();
+		void setNbTresor(int n);
 
 }; 
 

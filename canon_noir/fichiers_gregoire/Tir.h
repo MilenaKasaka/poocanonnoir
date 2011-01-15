@@ -19,14 +19,15 @@ using namespace std;
 class Tir : public Etat {
 private:
 	pair<int,int> direction;
-	int p;
-	int a;
+	int puissance;
+	int angle; // angle
+
 public:
 	Tir(Jeu* j);
 	bool reglerDirectionTir(int i, int j);
-	bool reglerTir(int puissance, int angle);
-	pair<int,int> tirer();
-	pair<int,int> calculerTir();
+	bool reglerTir(int p, int a);
+	pair<int,int> tirer(); // retourne l'impact du tir
+	pair<int,int> calculerTir(); // calcule la portée du tir
 };
 
 #endif

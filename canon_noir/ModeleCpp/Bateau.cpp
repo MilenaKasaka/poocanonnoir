@@ -4,7 +4,7 @@ Bateau::Bateau()
 {
 	posX = 0;
 	posY = 0;
-	nbTresor = 0;
+	tresor = true;
 	type = CARAVELLE;
 }
 
@@ -17,16 +17,16 @@ void Bateau::init_port(int port)
 		posY = 0;
 		break;
 	case 1:
-		posX = LARGEUR_PLATEAU;
+		posX = LARGEUR;
 		posY = 0;
 		break;
 	case 2:
-		posX = LARGEUR_PLATEAU;
-		posY = HAUTEUR_PLATEAU;
+		posX = LARGEUR;
+		posY = HAUTEUR;
 		break;
 	case 3:
 		posX = 0;
-		posY = HAUTEUR_PLATEAU;
+		posY = HAUTEUR;
 		break;
 	default:
 		posX = 0;
@@ -36,15 +36,17 @@ void Bateau::init_port(int port)
 }
 
 void Bateau::ajouterTresor(){
-	nbTresor++;
+	tresor = true;
 }
 
-void Bateau::enleverTresor()
+bool Bateau::enleverTresor()
 {
-	nbTresor--;
+	bool avaitTresor = tresor;
+	tresor = false;
+	return avaitTresor;
 }
 
-void Bateau::changerPosition(int x, int y)
+void Bateau::setPosition(int x, int y)
 {
 	posX = x;
 	posY = y;
@@ -53,6 +55,17 @@ void Bateau::changerPosition(int x, int y)
 TypeBateau Bateau::getType()
 {
 	return type;
+}
+
+void Bateau::setType(TypeBateau t)
+{
+	type = t;
+}
+
+void Bateau::retrograderType()
+{
+	if (type == FREGATE) type = RADEAU;
+	else if (type == CARAVELLE) type = FREGATE;
 }
 
 pair<int,int> Bateau::getPosition()

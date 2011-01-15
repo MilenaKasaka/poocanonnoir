@@ -15,16 +15,18 @@ class Bateau
 
 		int posX;
 		int posY;
-		int nbTresor;
+		bool tresor;
 		TypeBateau type;
 
 	public :
 		Bateau();
 		void init_port(int port);
 		void ajouterTresor();
-		void enleverTresor();
-		void changerPosition(int x, int y);
+		bool enleverTresor();
+		void setPosition(int x, int y);
 		TypeBateau getType();
+		void setType(TypeBateau t);
+		void retrograderType();
 		pair<int,int> getPosition();
 
 }; 

@@ -9,7 +9,7 @@ class Joueur
 {
 	private :
 
-		int nbTresorPort;
+		int nbTresorPort; // nombre de tresors ramenes au port
 		int bateauCourant;
 		vector<Bateau> bateaux;
 
@@ -22,8 +22,15 @@ class Joueur
 		1 sinon
 		*/
 		void initBateaux(int nbJoueurs);
-
 		pair<int,int> getPosBateau();
+		void setPosBateau(int x, int y);
+		bool donnerSonTresor();
+
+		int getNbTresorPort() const;
+
+		bool recevoirTir();
 
 }; 
+
+inline int Joueur::getNbTresorPort() const { return nbTresorPort ; }
 

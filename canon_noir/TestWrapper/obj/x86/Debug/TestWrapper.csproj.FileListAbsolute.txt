@@ -7,8 +7,3 @@ C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\TestWrapper\obj
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\TestWrapper\obj\x86\Debug\TestWrapper.pdb
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\TestWrapper.exe
 C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\TestWrapper.pdb
-G:\INSA_4_INFO\POO\canon_noir\Debug\TestWrapper.exe
-G:\INSA_4_INFO\POO\canon_noir\Debug\TestWrapper.pdb
-G:\INSA_4_INFO\POO\canon_noir\TestWrapper\obj\x86\Debug\ResolveAssemblyReference.cache
-G:\INSA_4_INFO\POO\canon_noir\TestWrapper\obj\x86\Debug\TestWrapper.exe
-G:\INSA_4_INFO\POO\canon_noir\TestWrapper\obj\x86\Debug\TestWrapper.pdb
