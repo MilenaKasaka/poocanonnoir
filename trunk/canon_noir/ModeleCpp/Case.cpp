@@ -12,3 +12,18 @@ TypeCase Case::getType()
 {
 	return EAU;
 }
+
+void Case::setType(TypeCase t)
+{
+	type = t;
+}
+
+int Case::getNbTresor()
+{
+	return nbTresor;
+}
+
+void Case::setNbTresor(int n)
+{
+	nbTresor = n;
+}

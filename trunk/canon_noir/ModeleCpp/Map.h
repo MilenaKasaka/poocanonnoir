@@ -15,11 +15,12 @@ using namespace std;
 class Map
 {
 	private :
-		vector<Case> cases;
+		vector<vector<Case> > cases;
 
 
 	public :
 		Map();
+		Case* getCase(int x, int y);
 		TypeCase getTypeCase(int x, int y);
 
 }; 

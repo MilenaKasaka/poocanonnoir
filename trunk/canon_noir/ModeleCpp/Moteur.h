@@ -42,9 +42,14 @@ class Moteur
 		int getEtatCourant();
 		void setLancerDe(pair<int,int> lance);
 		pair<int,int> getLancerDe();
+
+
+		// JOUEURS
 		int getNbJoueurs();
 		// Initialise le vecteur des joueurs
 		void initJoueurs(int size);
+		Joueur* getJoueur(int i);
+
 		Map getMap();
 		// Prend en compte l'état du moteur
 		bool estAccessible(int x, int y);

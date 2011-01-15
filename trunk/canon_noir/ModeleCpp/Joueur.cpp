@@ -21,3 +21,20 @@ pair<int,int> Joueur::getPosBateau()
 	return bateaux[bateauCourant].getPosition();
 }
 
+void Joueur::setPosBateau(int x, int y)
+{
+	bateaux[bateauCourant].setPosition(x,y);
+}
+
+bool donnerSonTresor()
+{
+	bateaux[bateauCourant].setPosition(x,y);
+}
+
+bool Joueur::recevoirTir()
+{
+	bateaux[bateauCourant].retrograderType();
+	return false;
+}
+
+

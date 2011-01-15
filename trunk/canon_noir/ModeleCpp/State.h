@@ -1,11 +1,14 @@
 ﻿#pragma once
 
+#include "Moteur.h"
+
 class State
 {
-	private :
+	protected :
+		Moteur* moteur;
 
 	public :
-
+		State(Moteur* m);
 		virtual void gerer()=0;
 
 }; 

@@ -4,21 +4,29 @@
 //     Changes to this file will be lost if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+#include <utility>
+#include "State.h"
+#include "Moteur.h"
+
+using namespace std;
 
 class Tir : public State
 {
 	private :
-
 		int angle;
 		int puissance;
+		pair<int,int> direction;
 
-		bool calculResTir();
+		pair<int,int> tirer(); // retourne l'impact du tir
+		pair<int,int> calculerTir(); // calcule la portée du tir
 
 	public :
 
-		Tir();
-		virtual void gerer();
-		virtual void initialiserTir(int angle, int puissance);
+		Tir(Moteur* m);
+		bool reglerDirectionTir(int i, int j);
+		bool reglerTir(int p, int a);
+		void gerer(); // gere les conséquences du tir sur le jeu
+		void initialiserTir(int angle, int puissance);
 
 }; 
 

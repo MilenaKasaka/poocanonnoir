@@ -72,6 +72,7 @@
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Moteur.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="Tir.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttenteNbJoueurs.h" />

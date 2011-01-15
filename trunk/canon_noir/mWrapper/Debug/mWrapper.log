@@ -1,4 +1,4 @@
-﻿La génération a démarré 03/01/2011 13:41:37.
+﻿La génération a démarré 14/01/2011 17:11:04.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\mWrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
@@ -6,25 +6,14 @@
        La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
        ClCompile:
          Toutes les sorties sont à jour.
-         Toutes les sorties sont à jour.
-         Toutes les sorties sont à jour.
-       ResourceCompile:
-         Toutes les sorties sont à jour.
-       Link:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\mWrapper.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 /DLL Debug\app.res
-         Debug\AssemblyInfo.obj
-         Debug\mWrapper.obj
-         Debug\Stdafx.obj
-         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-            Création de la bibliothèque C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.lib et de l'objet C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.exp
-         mWrapper.vcxproj -> C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.dll
-       Manifest:
-         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\mWrapper.dll;#2" /manifest Debug\mWrapper.dll.intermediate.manifest
-       FinalizeBuildStatus:
-         Suppression du fichier "Debug\mWrapper.unsuccessfulbuild".
-         Mise à jour de l'horodatage "Debug\mWrapper.lastbuildstate".
-     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" terminée (build cible(s)).
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDLL /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\mWrapper.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt mWrapper.cpp /clr:nostdlib 
+         mWrapper.cpp
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(8): error C2143: erreur de syntaxe : absence de ';' avant '*'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(11): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" terminée (build cible(s)) -- ÉCHEC.
 
-La génération a réussi.
+ÉCHEC de la build.
 
-Temps écoulé 00:00:01.48
+Temps écoulé 00:00:05.30

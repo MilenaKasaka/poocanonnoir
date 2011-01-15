@@ -74,6 +74,11 @@ void Moteur::initJoueurs(int size)
 	this->changerEtat(LANCER_DE);
 }
 
+Joueur* Moteur::getJoueur(int i)
+{
+	return (&joueurs[i]);
+}
+
 Map Moteur::getMap()
 {
 	return map;
