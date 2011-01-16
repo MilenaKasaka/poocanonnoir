@@ -1,8 +1,5 @@
 ﻿#pragma once
 
-#include "enumerations.h"
-#include "Moteur.h"
-
 #define WANTDLLEXP
 
 #ifdef WANTDLLEXP		//exportation dll 
@@ -13,6 +10,9 @@
 		#define EXTERNC 
 		
 #endif
+
+#include "enumerations.h"
+#include "Moteur.h"
 
 using namespace std;
 class DLL Facade

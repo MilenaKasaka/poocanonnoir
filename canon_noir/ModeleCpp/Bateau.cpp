@@ -39,11 +39,9 @@ void Bateau::ajouterTresor(){
 	tresor = true;
 }
 
-bool Bateau::enleverTresor()
+void Bateau::enleverTresor()
 {
-	bool avaitTresor = tresor;
 	tresor = false;
-	return avaitTresor;
 }
 
 void Bateau::setPosition(int x, int y)

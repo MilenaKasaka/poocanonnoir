@@ -1,6 +1,7 @@
-﻿#pragma once
+﻿#ifndef STATE_H
+#define STATE_H
 
-#include "Moteur.h"
+class Moteur;
 
 class State
 {
@@ -13,3 +14,4 @@ class State
 
 }; 
 
+#endif

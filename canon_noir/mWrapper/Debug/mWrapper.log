@@ -1,7 +1,7 @@
-﻿La génération a démarré 14/01/2011 17:11:04.
+﻿La génération a démarré 15/01/2011 20:32:50.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
-         Création de "Debug\mWrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+         Mise à jour de l'horodatage "Debug\mWrapper.unsuccessfulbuild".
        GenerateTargetFrameworkMonikerAttribute:
        La cible est ignorée "GenerateTargetFrameworkMonikerAttribute", car tous les fichiers de sortie sont à jour par rapport aux fichiers d'entrée.
        ClCompile:
@@ -12,8 +12,21 @@
      1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
      1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
      1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\State.h(11): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\AttenteNbJoueurs.h(13): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\ChoixCouleur.h(8): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\LancerDe.h(25): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\DeplacementBateau.h(15): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Tir.h(25): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\TirCaseCanon.h(14): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Tir.h(13): error C2011: 'Tir' : redéfinition du type 'class'
+                 c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Tir.h(13) : voir la déclaration de 'Tir'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\TirBordure.h(11): error C2504: 'Tir' : classe de base non définie
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\TirBordure.h(14): error C2061: erreur de syntaxe : identificateur 'Moteur'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Moteur.h(72): error C2556: 'Map *Moteur::getMap(void) const' : la fonction surchargée ne diffère que par le type de retour de 'Map Moteur::getMap(void) const'
+                 c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Moteur.h(62) : voir la déclaration de 'Moteur::getMap'
+     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\Moteur.h(72): error C2040: 'Moteur::getMap' : les niveaux d'indirection de 'Map *(void) const' et de 'Map (void) const' sont différents
      1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" terminée (build cible(s)) -- ÉCHEC.
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:05.30
+Temps écoulé 00:00:06.34
