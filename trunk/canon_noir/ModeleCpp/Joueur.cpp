@@ -26,9 +26,9 @@ void Joueur::setPosBateau(int x, int y)
 	bateaux[bateauCourant].setPosition(x,y);
 }
 
-bool donnerSonTresor()
+void Joueur::donnerSonTresor()
 {
-	bateaux[bateauCourant].setPosition(x,y);
+	bateaux[bateauCourant].enleverTresor();
 }
 
 bool Joueur::recevoirTir()

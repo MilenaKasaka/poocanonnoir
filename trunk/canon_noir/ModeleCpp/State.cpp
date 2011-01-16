@@ -4,3 +4,4 @@ State::State(Moteur* m)
 {
 	moteur = m;
 }
+

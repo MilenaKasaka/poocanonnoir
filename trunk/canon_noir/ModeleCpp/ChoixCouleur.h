@@ -1,10 +1,15 @@
-#pragma once
-#include "state.h"
+#ifndef CHOIX_COULEUR_H
+#define CHOIX_COULEUR_H
+
+#include "State.h"
+
 class ChoixCouleur : public State
 {
 public:
-	ChoixCouleur(void);
-	~ChoixCouleur(void);
+	ChoixCouleur(Moteur* m);
+	~ChoixCouleur();
 	void gerer();
 };
+
+#endif
 

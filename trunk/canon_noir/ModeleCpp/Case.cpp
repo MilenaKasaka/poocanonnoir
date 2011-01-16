@@ -4,6 +4,10 @@ void Case::prendreTresor()
 {
 }
 
+Case::Case() : type(EAU) , nbTresor(0)
+{
+}
+
 Case::Case(TypeCase t, int n)
 {
 }

@@ -1,93 +1,48 @@
-﻿La génération a démarré 14/01/2011 17:10:31.
+﻿La génération a démarré 16/01/2011 18:19:54.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\ModeleCpp.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        ClCompile:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp Bateau.cpp Case.cpp ChoixCouleur.cpp Facade.cpp Joueur.cpp LancerDe.cpp Map.cpp Moteur.cpp State.cpp Tir.cpp
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp ChoixCouleur.cpp DeplacementBateau.cpp Facade.cpp LancerDe.cpp Moteur.cpp State.cpp Tir.cpp TirBordure.cpp TirCaseCanon.cpp
          Tir.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(53): error C2065: 'jeu' : identificateur non déclaré
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(53): error C2227: la partie gauche de '->obtJoueurCourant' doit pointer vers un type class/struct/union/générique
-                 le type est ''unknown-type''
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(53): error C2227: la partie gauche de '->mettreTresorBateau' doit pointer vers un type class/struct/union/générique
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(55): error C2065: 'jeu' : identificateur non déclaré
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(55): error C2227: la partie gauche de '->incrJoueurCourant' doit pointer vers un type class/struct/union/générique
-                 le type est ''unknown-type''
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(56): error C2065: 'jeu' : identificateur non déclaré
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(56): error C2227: la partie gauche de '->setEtatCourant' doit pointer vers un type class/struct/union/générique
-                 le type est ''unknown-type''
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\tir.cpp(56): error C2065: 'DEPLACEMENT' : identificateur non déclaré
-         State.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
          Moteur.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(11): error C2061: erreur de syntaxe : identificateur 'Moteur'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.cpp(91): error C2065: 'LARGEUR_PLATEAU' : identificateur non déclaré
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.cpp(91): error C2065: 'LARGEUR_PLATEAU' : identificateur non déclaré
-         Map.cpp
-     1>d:\program files\microsoft visual studio 10.0\vc\include\memory(631): error C2512: 'Case::Case' : aucun constructeur par défaut approprié disponible
-                 d:\program files\microsoft visual studio 10.0\vc\include\memory(672) : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninit_def_fill_n<_FwdIt,_Diff,_Tval,_Alloc,Case>(_FwdIt,_Diff,const _Tval *,_Alloc &,_Valty *,std::_Nonscalar_ptr_iterator_tag)' en cours de compilation
-                 with
-                 [
-                     _FwdIt=Case *,
-                     _Diff=unsigned int,
-                     _Tval=Case,
-                     _Alloc=std::allocator<Case>,
-                     _Valty=Case
-                 ]
-                 d:\program files\microsoft visual studio 10.0\vc\include\vector(864) : voir la référence à l'instanciation de la fonction modèle 'void std::_Uninitialized_default_fill_n<Case*,unsigned int,_Ty,std::allocator<_Ty>>(_FwdIt,_Diff,const _Tval *,_Alloc &)' en cours de compilation
-                 with
-                 [
-                     _Ty=Case,
-                     _FwdIt=Case *,
-                     _Diff=unsigned int,
-                     _Tval=Case,
-                     _Alloc=std::allocator<Case>
-                 ]
-                 d:\program files\microsoft visual studio 10.0\vc\include\vector(857) : lors de la compilation de la fonction membre 'void std::vector<_Ty>::resize(unsigned int)' de la classe modèle
-                 with
-                 [
-                     _Ty=Case
-                 ]
-                 c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\map.cpp(7) : voir la référence à l'instanciation de la classe modèle 'std::vector<_Ty>' en cours de compilation
-                 with
-                 [
-                     _Ty=Case
-                 ]
-         LancerDe.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(11): error C2061: erreur de syntaxe : identificateur 'Moteur'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\lancerde.cpp(5): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-         Joueur.cpp
-         Facade.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(8): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\state.h(11): error C2061: erreur de syntaxe : identificateur 'Moteur'
-         ChoixCouleur.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\choixcouleur.cpp(5): error C2512: 'State' : aucun constructeur par défaut approprié disponible
-         Case.cpp
-         Bateau.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\bateau.cpp(58): error C2065: 'Type' : identificateur non déclaré
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\bateau.cpp(59): error C2448: 'Bateau::setType' : l'initialiseur de style fonction semble être une définition de fonction
-         AttenteNbJoueurs.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C2143: erreur de syntaxe : absence de ';' avant '*'
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\moteur.h(19): error C4430: spécificateur de type manquant - int est pris en compte par défaut. Remarque : C++ ne prend pas en charge int par défaut
          Génération de code en cours...
-     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+         Compilation en cours...
+         Facade.cpp
+         Génération de code en cours...
+         Ignoré... (aucune modification pertinente détectée)
+         TirCaseCanon.cpp
+         TirBordure.cpp
+         State.cpp
+         LancerDe.cpp
+         DeplacementBateau.cpp
+         ChoixCouleur.cpp
+         AttenteNbJoueurs.cpp
+       Link:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ModeleCpp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib" /MACHINE:X86 /DLL Debug\AttenteNbJoueurs.obj
+         Debug\Bateau.obj
+         Debug\Case.obj
+         Debug\ChoixCouleur.obj
+         Debug\DeplacementBateau.obj
+         Debug\Facade.obj
+         Debug\Joueur.obj
+         Debug\LancerDe.obj
+         Debug\Map.obj
+         Debug\Moteur.obj
+         Debug\State.obj
+         Debug\Tir.obj
+         Debug\TirBordure.obj
+         Debug\TirCaseCanon.obj
+         LINK : C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+            Création de la bibliothèque C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib et de l'objet C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.exp
+         ModeleCpp.vcxproj -> C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll;#2" /manifest Debug\ModeleCpp.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\ModeleCpp.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\ModeleCpp.lastbuildstate".
+     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" terminée (build cible(s)).
 
-ÉCHEC de la build.
+La génération a réussi.
 
-Temps écoulé 00:00:30.36
+Temps écoulé 00:00:11.81

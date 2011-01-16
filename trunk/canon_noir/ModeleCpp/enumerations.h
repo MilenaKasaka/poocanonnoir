@@ -6,6 +6,8 @@
 #define NB_JOUEURS_MAX 4
 #define DE 6
 
+#define NB_ETATS 6
+
 #define PUISSANCEMAX 10
 #define ANGLEMAX 5
 

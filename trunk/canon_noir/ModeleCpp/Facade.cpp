@@ -66,12 +66,12 @@ void Facade::initialiserTir(int angle, int puissance)
 
 int Facade::getDe1()
 {
-	return 0;
+	return moteur->getLancerDe().first;
 }
 
 int Facade::getDe2()
 {
-	return 0;
+	return moteur->getLancerDe().second;
 }
 
 bool Facade::estAccessible(int x,int y)

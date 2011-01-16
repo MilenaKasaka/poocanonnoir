@@ -1,7 +1,7 @@
 #include "ChoixCouleur.h"
 
 
-ChoixCouleur::ChoixCouleur(void)
+ChoixCouleur::ChoixCouleur(Moteur* m) : State(m)
 {
 }
 

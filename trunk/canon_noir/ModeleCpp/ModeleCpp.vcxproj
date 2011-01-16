@@ -66,6 +66,7 @@
     <ClCompile Include="Bateau.cpp" />
     <ClCompile Include="Case.cpp" />
     <ClCompile Include="ChoixCouleur.cpp" />
+    <ClCompile Include="DeplacementBateau.cpp" />
     <ClCompile Include="Facade.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="LancerDe.cpp" />
@@ -73,6 +74,8 @@
     <ClCompile Include="Moteur.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Tir.cpp" />
+    <ClCompile Include="TirBordure.cpp" />
+    <ClCompile Include="TirCaseCanon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AttenteNbJoueurs.h" />

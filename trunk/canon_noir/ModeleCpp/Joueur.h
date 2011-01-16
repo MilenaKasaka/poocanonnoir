@@ -1,4 +1,7 @@
-﻿#include <vector>
+﻿#ifndef JOUEUR_H
+#define JOUEUR_H
+
+#include <vector>
 #include <iostream>
 #include <utility>
 #include "Bateau.h"
@@ -24,7 +27,7 @@ class Joueur
 		void initBateaux(int nbJoueurs);
 		pair<int,int> getPosBateau();
 		void setPosBateau(int x, int y);
-		bool donnerSonTresor();
+		void donnerSonTresor();
 
 		int getNbTresorPort() const;
 
@@ -34,3 +37,4 @@ class Joueur
 
 inline int Joueur::getNbTresorPort() const { return nbTresorPort ; }
 
+#endif
