@@ -20,8 +20,8 @@ class Tir : public State
 	public :
 
 		Tir(Moteur* m);
-		bool reglerDirectionTir(int i, int j);
-		bool reglerTir(int p, int a);
+		// p = puissance, a = angle (hauteur), c = coordonnée de la case visee
+		bool reglerTir(int p, int a, pair<int,int> c);
 		void gerer(); // gere les conséquences du tir sur le jeu
 		void initialiserTir(int angle, int puissance);
 

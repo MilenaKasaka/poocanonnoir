@@ -13,6 +13,7 @@ class Case
 
 		int nbTresor;
 		TypeCase type;
+		// rajouter un attribut pour la hauteur
 
 	public :
 		Case();
