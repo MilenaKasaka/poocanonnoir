@@ -31,7 +31,7 @@ class DLL Facade
 		int getNbLigne();
 		int getNbColonnes();
 		int getNbJoueurs();
-		void setNbJoueurs(int size);
+		void initJoueurs(int size);
 
 		int getTypeBateau(int joueur, int bateau);
 		int getXBateau(int joueur);

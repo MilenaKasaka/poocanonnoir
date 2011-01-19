@@ -26,9 +26,9 @@ public :
 		return f->getNbJoueurs();
 	}
 
-	void setNbJoueurs(int size)
+	void initJoueurs(int size)
 	{
-		f->setNbJoueurs(size);
+		f->initJoueurs(size);
 	}
 
 	int getTypeBateau(int joueur, int bateau)

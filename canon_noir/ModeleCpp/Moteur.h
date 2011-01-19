@@ -24,8 +24,8 @@ class Moteur
 		pair<int,int> resLancerDe;
 		vector<State* > etats;
 		int etatCourant;
-		bool initialise; 
-		vector<pair<int,int> > casesAccessibles;
+		bool premierInit; // permet de différencier le lancer permettant de selectionner le 1er joueur
+		vector<Case> casesAccessibles;
 		Map map;
 		vector<Joueur> joueurs;
 
@@ -45,11 +45,13 @@ class Moteur
 		void requete();
 
 		void setEtatCourant(int etat);
-		int getEtatCourant();
+		int getEtatCourant() const;
 
 		// DES
 		void setLancerDe(pair<int,int> lance);
-		pair<int,int> getLancerDe();
+		pair<int,int> getLancerDe() const;
+		void setPremierInit();
+		bool getPremierInit() const;
 
 		// JOUEURS
 		int getNbJoueurs();
@@ -58,17 +60,21 @@ class Moteur
 		Joueur* getJoueur(int i);
 		Joueur* getJoueurCourant();
 		void joueurSuivant();
+		vector<pair<int,int> > getCooBateaux();
 
 		// MAP
 		Map* getMap();
 		// Prend en compte l'état du moteur
+		void setCasesAccessibles(vector<Case> ca);
 		bool estAccessible(int x, int y);
 		TypeBateau getTypeBateau();
 		pair<int,int> getPosJoueurCourant();
-		//TypeCase getTypeCase(int x, int y);
+		TypeCase getTypeCase(int x, int y);
+		bool contientBateau(int x, int y); // retourne vrai si la case contient un bateau
 };
 
-/*inline pair<int,int> Moteur::getLancerDe() const { return resLancerDe; }
-inline int Moteur::getEtatCourant() const { return etatCourant; }*/
+inline int Moteur::getEtatCourant() const { return etatCourant; }
+inline pair<int,int> Moteur::getLancerDe() const { return resLancerDe; }
+inline bool Moteur::getPremierInit() const { return premierInit; }
 
 #endif

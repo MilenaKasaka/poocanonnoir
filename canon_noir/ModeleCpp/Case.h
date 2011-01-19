@@ -5,7 +5,10 @@
 /// si type = TRESOR alors nbTresor>=0,
 /// sinon nbTresor = 0
 /// </remarks>
+#include <utility>
 #include "enumerations.h"
+
+using namespace std;
 
 class Case
 {
@@ -13,7 +16,8 @@ class Case
 
 		int nbTresor;
 		TypeCase type;
-		// rajouter un attribut pour la hauteur
+		int altitude;
+		pair<int,int> coordonnees;
 
 	public :
 		Case();
@@ -23,7 +27,10 @@ class Case
 		void setType(TypeCase t);
 		int getNbTresor();
 		void setNbTresor(int n);
+		pair<int,int> getCoordonnees() const;
+		void setCoordonnees(pair<int,int> c);
+};
 
-}; 
+inline pair<int,int> Case::getCoordonnees() const { return coordonnees; }
 
 #endif

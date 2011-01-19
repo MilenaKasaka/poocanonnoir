@@ -12,7 +12,7 @@ class Tir : public State
 	private :
 		int angle;
 		int puissance;
-		pair<int,int> direction;
+		pair<int,int> direction; // coordonnees de la case visee
 
 		pair<int,int> tirer(); // retourne l'impact du tir
 		pair<int,int> calculerTir(); // calcule la portée du tir
@@ -21,9 +21,8 @@ class Tir : public State
 
 		Tir(Moteur* m);
 		// p = puissance, a = angle (hauteur), c = coordonnée de la case visee
-		bool reglerTir(int p, int a, pair<int,int> c);
+		void reglerTir(int p, int a, pair<int,int> c);
 		void gerer(); // gere les conséquences du tir sur le jeu
-		void initialiserTir(int angle, int puissance);
 
 }; 
 

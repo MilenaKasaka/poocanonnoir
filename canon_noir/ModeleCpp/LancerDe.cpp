@@ -1,4 +1,5 @@
 #include "LancerDe.h"
+#include "Moteur.h"
 
 LancerDe::LancerDe(Moteur* m) : State(m)
 {
@@ -12,14 +13,20 @@ void LancerDe::gerer()
 
 void LancerDe::tirerDes()
 {
-	/*int lancer1 = rand() % 6 + 1;
-	if(moteur->getNbJoueurs()  == 2)
+	// ERREUR A L_EXECUTION ICI
+	int lancer1 = rand() % 6 + 1;
+	if(moteur->getJoueurCourant()->getTypeBateau() == CARAVELLE)
 	{
-		int lasncer2 = rand() % 6 + 1;
+		int lancer2 = rand() % 6 + 1;
 		moteur->setLancerDe(make_pair(lancer1,lancer2));
 	}
 	else
 	{
 		moteur->setLancerDe(make_pair(lancer1,0));
-	}*/
+	}
+	
+	if (moteur->getPremierInit())
+		moteur->setEtatCourant(DEPLACEMENT_BATEAU);
+	else
+		moteur->setPremierInit();
 }

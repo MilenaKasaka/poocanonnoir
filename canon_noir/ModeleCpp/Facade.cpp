@@ -27,10 +27,10 @@ int Facade::getNbColonnes()
 
 int Facade::getNbJoueurs()
 {
-	return 0;
+	return moteur->getNbJoueurs();
 }
 
-void Facade::setNbJoueurs(int size)
+void Facade::initJoueurs(int size)
 {
 	moteur->initJoueurs(size);
 }

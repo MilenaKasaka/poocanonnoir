@@ -2,9 +2,8 @@
 
 using namespace std;
 
-TypeBateau Joueur::getTypeBateau()
+Joueur::Joueur() : nbTresorPort(0), bateauCourant(0)
 {
-	return bateaux[bateauCourant].getType();
 }
 
 void Joueur::initBateaux(int nbJoueurs)
@@ -13,12 +12,7 @@ void Joueur::initBateaux(int nbJoueurs)
 		bateaux.resize(2);
 	else
 		bateaux.resize(1);
-	cout << "initBateaux pour " << nbJoueurs << " joueurs" << endl;
-}
-
-pair<int,int> Joueur::getPosBateau()
-{
-	return bateaux[bateauCourant].getPosition();
+	//cout << "Chaque joueur a bien " << getNbBateaux() << " bateaux" << endl;
 }
 
 void Joueur::setPosBateau(int x, int y)
@@ -31,10 +25,9 @@ void Joueur::donnerSonTresor()
 	bateaux[bateauCourant].enleverTresor();
 }
 
-bool Joueur::recevoirTir()
+void Joueur::recevoirTir()
 {
 	bateaux[bateauCourant].retrograderType();
-	return false;
 }
 
 
