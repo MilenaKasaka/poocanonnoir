@@ -4,7 +4,7 @@ Bateau::Bateau()
 {
 	posX = 0;
 	posY = 0;
-	tresor = true;
+	tresor = false;
 	type = CARAVELLE;
 }
 
@@ -35,7 +35,8 @@ void Bateau::init_port(int port)
 	}
 }
 
-void Bateau::ajouterTresor(){
+void Bateau::ajouterTresor()
+{
 	tresor = true;
 }
 

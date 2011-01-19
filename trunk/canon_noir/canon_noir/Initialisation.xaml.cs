@@ -41,7 +41,7 @@ namespace canon_noir
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             String ch = ((ComboBoxItem)comboBox1.SelectedItem).Content.ToString();
-            moteur.setNbJoueurs(Int32.Parse(ch));
+            moteur.initJoueurs(Int32.Parse(ch));
             //MainWindow mw = new MainWindow();
             //mw.Show();
             //this.Close();

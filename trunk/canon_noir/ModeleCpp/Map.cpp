@@ -2,17 +2,31 @@
 
 Map::Map()
 {
-	cases = vector<vector<Case> >(HAUTEUR);
-	for (int i = 0; i<HAUTEUR; i++) {
-		cases[i].resize(LARGEUR);
-		for (int j = 0; j<LARGEUR; j++) {
-			cases[i][j].setType(EAU);
-			cases[i][j].setNbTresor(0);
-		}
+	cases.resize(HAUTEUR*LARGEUR);
+	int cptLarg = 0;
+	int cptHaut = 0;
+	vector<Case>::iterator it;
+	for (it = cases.begin() ; it!=cases.end(), cptHaut<HAUTEUR; it++)
+	{
+		(*it).setCoordonnees(make_pair(cptLarg,cptHaut));
+		if (cptLarg < LARGEUR - 1)
+			cptLarg++;
+		else // derniere case de la ligne
+		{
+			cptLarg = 0;
+			cptHaut++;
+		}		
 	}
 }
 
 TypeCase Map::getTypeCase(int x, int y)
 {
-	return EAU;
+	if (x<0 || x>LARGEUR - 1 || y<0 || y>HAUTEUR-1)
+		throw exception("Coordonnees incorrectes");
+	vector<Case>::iterator it;
+	it = find_if(cases.begin(),cases.end(),coo_find(make_pair(x,y)));
+	if (it == cases.end()) // la case n'est pas trouvee
+		return ILE;
+	else
+		return (*it).getType();
 }

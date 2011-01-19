@@ -1,4 +1,14 @@
+/**
+* \file Tir.cpp
+* \brief Definition des fonctions permettant de gerer les actions liees a l'etat Tir
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date date de creation
+*
+*/
 #include "Tir.h"
+#include "Moteur.h"
 
 using namespace std;
 
@@ -13,34 +23,21 @@ void Tir::gerer()
 {
 }
 
-bool Tir::reglerTir(int i, int j, pair<int,int> c) {
-	if (i >= 1 &&
-		i <= HAUTEUR &&
-		j >= 1 &&
-		j <= LARGEUR) {
-		direction.first = i;
-		direction.second = j;
-		return true;
-	} else {
-		return false;
-	}
-}
-
-bool Tir::reglerTir(int p, int a) { //faire des contrôles
-	if (puissance >= 1 &&
-		puissance <= PUISSANCEMAX &&
-		angle >= 1 &&
-		angle <= ANGLEMAX) {
-		puissance = p;
-		angle = a;
-		return true;
-	} else {
-		return false;
-	}	
+void Tir::reglerTir(int p, int a, pair<int,int> c) {
+	// FAIRE PLUTOT CES TESTS AU NIVEAU INTERFACE
+	/*if (i < 0 || i >= HAUTEUR || j < 0 || j >= LARGEUR || 
+		throw exception("coordonnees de la case visee incorrectes");
+	if (puissance < 0 || puissance > PUISSANCEMAX)
+		throw exeption("puissance incorrecte");
+	if (angle < 0 || angle > ANGLEMAX)
+		throw exeption("angle incorrect");*/
+	direction = c;
+	puissance = p;
+	angle = a;
 }
 
 pair<int,int> Tir::tirer() {
-	/*pair<int,int> impact = calculerTir();
+	pair<int,int> impact = calculerTir();
 	//gérer les conséquences du tir et le changement d'état ICI
 	//recherche du joueur touché
 	//changement de bateau, transfert du trésor
@@ -53,15 +50,15 @@ pair<int,int> Tir::tirer() {
 		}
 		i++;
 	}
-	if (moteur->getJoueur(i)->recevoirTir()) {
+	/*if (moteur->getJoueur(i)->recevoirTir()) {
 		moteur->getJoueurCourant()->donnerSonTresor();
-	}
+	}*/
 	moteur->joueurSuivant();
 	moteur->setEtatCourant(DEPLACEMENT_BATEAU);
 	//gérer la situation où le bateau qui tire a déjà un trésor
 	//imaginer une conception où l'échange de trésor se passe entièrement dans la classe joueur
-	return impact;*/
-	return make_pair(0,0);
+	return impact;
+	//return make_pair(0,0);
 }
 
 pair<int,int> Tir::calculerTir() { //to be completed

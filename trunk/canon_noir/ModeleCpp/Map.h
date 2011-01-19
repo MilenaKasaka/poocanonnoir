@@ -3,6 +3,7 @@
 
 /// <remarks>Les cases sont stockées dans un vecteur à 2 dimensions</remarks>
 #include <vector>
+#include <algorithm>
 #include "Case.h"
 #include "enumerations.h"
 
@@ -11,14 +12,24 @@ using namespace std;
 class Map
 {
 	private :
-		vector<vector<Case> > cases;
+		vector<Case> cases;
 
 
 	public :
 		Map();
+		vector<Case> getCases() const;
 		Case* getCase(int x, int y);
 		TypeCase getTypeCase(int x, int y);
+		// Retourne la liste des cases sur lesquelles il y a un bateau
+};
 
-}; 
+inline vector<Case> Map::getCases() const { return cases; }
+
+class coo_find { // objet fonction de type prédicat
+pair<int,int> coo;
+public:
+coo_find(pair<int,int> c) {coo=c;};
+bool operator()(Case c) { return c.getCoordonnees() == coo; }
+};
 
 #endif
