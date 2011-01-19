@@ -1,20 +1,12 @@
-﻿La génération a démarré 19/01/2011 11:16:50.
+﻿La génération a démarré 19/01/2011 16:02:23.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Mise à jour de l'horodatage "Debug\ModeleCpp.unsuccessfulbuild".
        ClCompile:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp Case.cpp ChoixCouleur.cpp DeplacementBateau.cpp Facade.cpp LancerDe.cpp Map.cpp Moteur.cpp State.cpp Tir.cpp TirBordure.cpp TirCaseCanon.cpp
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp Case.cpp ChoixCouleur.cpp DeplacementBateau.cpp Facade.cpp LancerDe.cpp Moteur.cpp State.cpp Tir.cpp TirBordure.cpp TirCaseCanon.cpp
          Moteur.cpp
-         Map.cpp
          DeplacementBateau.cpp
          Case.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\case.cpp(37): error C2065: 'coordonnes' : identificateur non déclaré
-         Génération de code en cours...
-         Compilation en cours...
-         Tir.cpp
-         LancerDe.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\lancerde.cpp(6): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-         Facade.cpp
          Génération de code en cours...
          Ignoré... (aucune modification pertinente détectée)
          TirCaseCanon.cpp
@@ -22,8 +14,34 @@
          State.cpp
          ChoixCouleur.cpp
          AttenteNbJoueurs.cpp
-     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+         Tir.cpp
+         LancerDe.cpp
+         Facade.cpp
+       Link:
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ModeleCpp.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib" /MACHINE:X86 /DLL Debug\AttenteNbJoueurs.obj
+         Debug\Bateau.obj
+         Debug\Case.obj
+         Debug\ChoixCouleur.obj
+         Debug\DeplacementBateau.obj
+         Debug\Facade.obj
+         Debug\Joueur.obj
+         Debug\LancerDe.obj
+         Debug\Map.obj
+         Debug\Moteur.obj
+         Debug\State.obj
+         Debug\Tir.obj
+         Debug\TirBordure.obj
+         Debug\TirCaseCanon.obj
+         LINK : C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+            Création de la bibliothèque C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.lib et de l'objet C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.exp
+         ModeleCpp.vcxproj -> C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll
+       Manifest:
+         C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\Debug\ModeleCpp.dll;#2" /manifest Debug\ModeleCpp.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\ModeleCpp.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\ModeleCpp.lastbuildstate".
+     1>Génération du projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" terminée (build cible(s)).
 
-ÉCHEC de la build.
+La génération a réussi.
 
-Temps écoulé 00:00:07
+Temps écoulé 00:00:05.79
