@@ -10,6 +10,7 @@ using namespace std;
 class DeplacementBateau : public State
 {
 	private :
+		bool caseBonneDistance(); // retourne vrai si la case est a la bonne distance par rapport au joueur
 		// retourne la liste des cases sur lesquelles il y a un bateau
 		//vector <pair<int,int> > casesBateaux();
 		// retourne la liste des cases accessibles a l'utilisateur en fonction de son bateau et de son lancer de des
