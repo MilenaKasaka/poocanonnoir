@@ -1,45 +1,20 @@
-﻿La génération a démarré 19/01/2011 09:35:19.
+﻿La génération a démarré 19/01/2011 11:16:50.
      1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\ModeleCpp\ModeleCpp.vcxproj" sur le nœud 2 (build cible(s)).
      1>InitializeBuildStatus:
          Mise à jour de l'horodatage "Debug\ModeleCpp.unsuccessfulbuild".
        ClCompile:
-         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp Case.cpp ChoixCouleur.cpp DeplacementBateau.cpp Facade.cpp LancerDe.cpp Moteur.cpp State.cpp Tir.cpp TirBordure.cpp TirCaseCanon.cpp
+         D:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt AttenteNbJoueurs.cpp Case.cpp ChoixCouleur.cpp DeplacementBateau.cpp Facade.cpp LancerDe.cpp Map.cpp Moteur.cpp State.cpp Tir.cpp TirBordure.cpp TirCaseCanon.cpp
+         Moteur.cpp
+         Map.cpp
          DeplacementBateau.cpp
-     1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\deplacementbateau.cpp(23): error C2679: '=' binaire : aucun opérateur trouvé qui accepte un opérande de partie droite de type 'std::vector<_Ty>' (ou il n'existe pas de conversion acceptable)
-                 with
-                 [
-                     _Ty=std::vector<Case>
-                 ]
-                 d:\program files\microsoft visual studio 10.0\vc\include\vector(599): peut être 'std::vector<_Ty> &std::vector<_Ty>::operator =(std::vector<_Ty> &&)'
-                 with
-                 [
-                     _Ty=Case
-                 ]
-                 d:\program files\microsoft visual studio 10.0\vc\include\vector(708): ou       'std::vector<_Ty> &std::vector<_Ty>::operator =(const std::vector<_Ty> &)'
-                 with
-                 [
-                     _Ty=Case
-                 ]
-                 lors de la tentative de mise en correspondance de la liste des arguments '(std::vector<_Ty>, std::vector<_Ty>)'
-                 with
-                 [
-                     _Ty=Case
-                 ]
-                 and
-                 [
-                     _Ty=std::vector<Case>
-                 ]
          Case.cpp
      1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\case.cpp(37): error C2065: 'coordonnes' : identificateur non déclaré
          Génération de code en cours...
          Compilation en cours...
-         Facade.cpp
-         Génération de code en cours...
-         Compilation en cours...
          Tir.cpp
-         Moteur.cpp
          LancerDe.cpp
      1>c:\users\sophie\documents\visual studio 2010\projects\canon_noir\modelecpp\lancerde.cpp(6): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+         Facade.cpp
          Génération de code en cours...
          Ignoré... (aucune modification pertinente détectée)
          TirCaseCanon.cpp
@@ -51,4 +26,4 @@
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:05.72
+Temps écoulé 00:00:07

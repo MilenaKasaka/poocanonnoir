@@ -34,5 +34,5 @@ void Case::setNbTresor(int n)
 
 void Case::setCoordonnees(pair<int,int> c)
 {
-	coordonnes = c;
+	coordonnees = c;
 }

@@ -143,12 +143,14 @@ TypeCase Moteur::getTypeCase(int x, int y)
 	return map.getTypeCase(x,y);
 }
 
-bool Moteur::contientBateau(int x, int y)
+bool Moteur::contientBateau(Case c)
 {
 	vector<Joueur>::iterator it;
 	for (it = joueurs.begin() ; it!=joueurs.end(); it++)
 	{
-		if ( ((*it).getPosBateau().first == x) || ((*it).getPosBateau().second == y) )
+		/*if ( ((*it).getPosBateau().first == x) || ((*it).getPosBateau().second == y) )
+			return true;*/
+		if ( (*it).getPosBateau() == c.getCoordonnees() )
 			return true;
 	}
 	return false;

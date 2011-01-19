@@ -70,7 +70,7 @@ class Moteur
 		TypeBateau getTypeBateau();
 		pair<int,int> getPosJoueurCourant();
 		TypeCase getTypeCase(int x, int y);
-		bool contientBateau(int x, int y); // retourne vrai si la case contient un bateau
+		bool contientBateau(Case c); // retourne vrai si la case contient un bateau
 };
 
 inline int Moteur::getEtatCourant() const { return etatCourant; }
