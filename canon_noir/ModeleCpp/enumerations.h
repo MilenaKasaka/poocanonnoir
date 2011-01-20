@@ -1,3 +1,11 @@
+/**
+* \file enumerations.h
+* \brief Fichier d'en-tete definissant les constantes et les enumerations communes au modele
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #ifndef ENUMERATIONS_H
 #define ENUMERATIONS_H
 

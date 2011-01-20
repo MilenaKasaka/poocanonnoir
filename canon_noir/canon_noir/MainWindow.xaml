@@ -3,47 +3,23 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="650" Width="1000">
     <Canvas Name="canvas1">
-        <Grid Canvas.Left="12" Canvas.Top="236">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="50"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
-            <Button Grid.Column="0" Grid.Row="0">
-                <StackPanel Orientation="Vertical">
-                    <Image Height="43" Source="/canon_noir;component/images/two_red_dice_01.png" Width="47" MouseRightButtonDown="MouseRightDown_Image" PreviewMouseRightButtonDown="PreviewMouseRightDown_Image" />
-                    <TextBlock Text="Canon" HorizontalAlignment="Center" FontSize="10" />
-                </StackPanel>
-            </Button>
-            <Button Grid.Column="1" Grid.Row="0" Content="Bouton 2"/>
-            <Button Grid.Column="2" Grid.Row="0" Content="Bouton 3"/>
-            <Button Grid.Column="0" Grid.Row="1" Content="Bouton 4"/>
-            <Button Grid.Column="1" Grid.Row="1" Content="Bouton 5"/>
-            <Button Grid.Column="2" Grid.Row="1" Content="Bouton 6"/>
-            <Button Grid.Column="0" Grid.Row="2" Content="Bouton 7"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="Bouton 8"/>
-            <Button Grid.Column="2" Grid.Row="2" Content="Bouton 9"/>
-        </Grid>
+        
+        <Button Name="btn_Des"></Button>
+           
         <Image Margin="170,30,10,10" Width="800" Stretch="UniformToFill" Name="plateau" Source="/canon_noir;component/images/plateau.jpg" Canvas.Left="-4" Canvas.Top="-18" />
-        <Grid Canvas.Left="182" Canvas.Top="35" Height="590" Name="grid1" Width="796">
-            <Grid.RowDefinitions>
+        <Grid Canvas.Left="182" Canvas.Top="33" Height="569" Name="grid1" Width="796">
+            <!--<Grid.RowDefinitions>
+                <RowDefinition Height="70" />
                 <RowDefinition Height="68" />
                 <RowDefinition Height="68" />
                 <RowDefinition Height="68" />
-                <RowDefinition Height="68*" />
-                <RowDefinition Height="66*" />
-                <RowDefinition Height="68*" />
                 <RowDefinition Height="68" />
                 <RowDefinition Height="68" />
+                <RowDefinition Height="68" />
+                <RowDefinition Height="70" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="78" />
-                <ColumnDefinition Width="58" />
+                <ColumnDefinition Width="76" />
                 <ColumnDefinition Width="68" />
                 <ColumnDefinition Width="68" />
                 <ColumnDefinition Width="68" />
@@ -52,9 +28,14 @@
                 <ColumnDefinition Width="68" />
                 <ColumnDefinition Width="68" />
                 <ColumnDefinition Width="68" />
-                <ColumnDefinition Width="82" />
-                <ColumnDefinition Width="34*" />
-            </Grid.ColumnDefinitions>
+                <ColumnDefinition Width="68" />
+                <ColumnDefinition Width="74" />
+            </Grid.ColumnDefinitions>-->
         </Grid>
+        <TextBlock Canvas.Left="15" Canvas.Top="12" Height="228" Name="textBlock1" Text="" Width="148" />
+        <StackPanel Orientation="Vertical" Canvas.Left="63" Canvas.Top="264">
+            <Image Height="43" Source="/canon_noir;component/images/two_red_dice_01.png" Width="47" />
+            <TextBlock Text="Dés" HorizontalAlignment="Center" FontSize="10" />
+        </StackPanel>
     </Canvas>
 </Window>

@@ -1,4 +1,12 @@
-﻿#ifndef TIR_H
+﻿/**
+* \file Tir.h
+* \brief Fichier d'en-tete decrivant la classe Tir
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef TIR_H
 #define TIR_H
 
 #include <utility>

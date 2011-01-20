@@ -1,11 +1,10 @@
 /**
 * \file Tir.cpp
-* \brief Definition des fonctions permettant de gerer les actions liees a l'etat Tir
+* \brief Fichier definissant les fonctions de la classe Tir
 * \author Sophie Le Corre
 * \author Gregoire Lecourt
 * \version 1.0
-* \date date de creation
-*
+* \date 26/01/2011
 */
 #include "Tir.h"
 #include "Moteur.h"

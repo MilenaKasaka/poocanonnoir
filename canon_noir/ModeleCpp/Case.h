@@ -1,4 +1,12 @@
-﻿#ifndef CASE_H
+﻿/**
+* \file Case.h
+* \brief Fichier d'en-tete decrivant la classe Case
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef CASE_H
 #define CASE_H
 
 /// <remarks>
@@ -10,6 +18,11 @@
 
 using namespace std;
 
+/**
+* \class Case
+* \brief Representation d'une case
+* Une case est définie par une position, une altitude, un type et peut contenir un tresor
+*/
 class Case
 {
 	private :

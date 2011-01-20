@@ -1,3 +1,11 @@
+/**
+* \file Joueur.cpp
+* \brief Fichier definissant les fonctions de la classe Joueur
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #include "Joueur.h"
 
 using namespace std;

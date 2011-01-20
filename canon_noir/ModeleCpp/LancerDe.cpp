@@ -1,3 +1,11 @@
+/**
+* \file LancerDe.cpp
+* \brief Fichier definissant les fonctions de la classe LancerDe
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #include "LancerDe.h"
 #include "Moteur.h"
 

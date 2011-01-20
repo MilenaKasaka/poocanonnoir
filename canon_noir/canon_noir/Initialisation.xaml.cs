@@ -42,7 +42,7 @@ namespace canon_noir
         {
             String ch = ((ComboBoxItem)comboBox1.SelectedItem).Content.ToString();
             moteur.initJoueurs(Int32.Parse(ch));
-            MainWindow mw = new MainWindow();
+            MainWindow mw = new MainWindow(moteur);
             mw.Show();
             this.Close();
         }

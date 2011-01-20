@@ -1,5 +1,5 @@
-﻿La génération a démarré 19/01/2011 16:05:17.
-     1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 2 (build cible(s)).
+﻿La génération a démarré 20/01/2011 20:32:21.
+     1>Projet "C:\Users\Sophie\Documents\Visual Studio 2010\Projects\canon_noir\mWrapper\mWrapper.vcxproj" sur le nœud 3 (build cible(s)).
      1>InitializeBuildStatus:
          Création de "Debug\mWrapper.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        GenerateTargetFrameworkMonikerAttribute:
@@ -28,4 +28,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:03.74
+Temps écoulé 00:00:09.52

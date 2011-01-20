@@ -1,4 +1,12 @@
-﻿#ifndef JOUEUR_H
+﻿/**
+* \file Joueur.h
+* \brief Fichier d'en-tete decrivant la classe Joueur
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef JOUEUR_H
 #define JOUEUR_H
 
 #include <vector>
