@@ -1,3 +1,11 @@
+/**
+* \file Map.cpp
+* \brief Fichier definissant les fonctions de la classe Map
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #include "Map.h"
 
 Map::Map()

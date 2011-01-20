@@ -1,4 +1,12 @@
-﻿#ifndef MOTEUR_H
+﻿/**
+* \file Moteur.h
+* \brief Fichier d'en-tete decrivant la classe Moteur
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef MOTEUR_H
 #define MOTEUR_H
 
 #include <vector>
@@ -34,6 +42,7 @@ class Moteur
 	public :
 
 		Moteur();
+		~Moteur();
 
 		// Actions disponibles sur l'interface
 		bool dispoLancerDe();
@@ -67,7 +76,8 @@ class Moteur
 		// Prend en compte l'état du moteur
 		void setCasesAccessibles(vector<Case> ca);
 		bool estAccessible(int x, int y);
-		TypeBateau getTypeBateau();
+		TypeBateau getTypeBateau(); // retourne le type de bateau du joueur courant
+		TypeBateau getTypeBateau(int joueur);
 		pair<int,int> getPosJoueurCourant();
 		TypeCase getTypeCase(int x, int y);
 		bool contientBateau(Case c); // retourne vrai si la case contient un bateau

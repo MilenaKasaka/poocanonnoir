@@ -1,4 +1,12 @@
-﻿#pragma once
+﻿/**
+* \file Facade.h
+* \brief Fichier d'en-tete decrivant la classe Facade
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#pragma once
 
 #define WANTDLLEXP
 
@@ -24,16 +32,17 @@ class DLL Facade
 	public :
 
 		Facade();
+		//~Facade();
 
 		void initMoteur();
 		void execute();
 
-		int getNbLigne();
+		int getNbLignes();
 		int getNbColonnes();
 		int getNbJoueurs();
 		void initJoueurs(int size);
 
-		int getTypeBateau(int joueur, int bateau);
+		int getTypeBateau(int joueur);
 		int getXBateau(int joueur);
 		int getYBateau(int joueur);
 		int getNbTresors(int joueur);

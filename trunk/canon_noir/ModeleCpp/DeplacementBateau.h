@@ -1,4 +1,12 @@
-﻿#ifndef DEPLACEMENT_BATEAU_H
+﻿/**
+* \file DeplacementBateau.h
+* \brief Fichier d'en-tete decrivant la classe DeplacementBateau
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef DEPLACEMENT_BATEAU_H
 #define DEPLACEMENT_BATEAU_H
 
 #include <vector>

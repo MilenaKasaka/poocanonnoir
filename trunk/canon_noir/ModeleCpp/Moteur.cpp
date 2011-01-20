@@ -1,8 +1,24 @@
+/**
+* \file Moteur.cpp
+* \brief Fichier definissant les fonctions de la classe Moteur
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #include "Moteur.h"
 
 Moteur::Moteur() : joueurCourant(0), resLancerDe(make_pair(0,0)), etatCourant(ATTENTE_NB_JOUEURS), premierInit(false)
 {
 	initEtats();
+}
+
+Moteur::~Moteur()
+{
+	vector<State*>::iterator it;
+	for(it=etats.begin() ; it!=etats.end(); it++){
+		delete (*it);
+	}
 }
 
 void Moteur::initEtats()
@@ -131,6 +147,11 @@ bool Moteur::estAccessible(int x, int y)
 TypeBateau Moteur::getTypeBateau()
 {
 	return joueurs[joueurCourant].getTypeBateau();
+}
+
+TypeBateau Moteur::getTypeBateau(int joueur)
+{
+	return joueurs[joueur].getTypeBateau();
 }
 
 pair<int,int> Moteur::getPosJoueurCourant()

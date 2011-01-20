@@ -1,4 +1,12 @@
-﻿#ifndef MAP_H
+﻿/**
+* \file Map.h
+* \brief Fichier d'en-tete decrivant la classe Map
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef MAP_H
 #define MAP_H
 
 /// <remarks>Les cases sont stockées dans un vecteur à 2 dimensions</remarks>

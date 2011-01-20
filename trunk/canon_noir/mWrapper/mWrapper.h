@@ -21,6 +21,16 @@ public :
 		Facade_Delete(f);
 	}
 
+	int getNbLignes()
+	{
+		return f->getNbLignes();
+	}
+
+	int getNbColonnes()
+	{
+		return f->getNbColonnes();
+	}
+
 	int getNbJoueurs()
 	{
 		return f->getNbJoueurs();
@@ -31,9 +41,9 @@ public :
 		f->initJoueurs(size);
 	}
 
-	int getTypeBateau(int joueur, int bateau)
+	int getTypeBateau(int joueur)
 	{
-		return ((int)f->getTypeBateau(joueur,bateau));
+		return ((int)f->getTypeBateau(joueur));
 	}
 
 	void execute()
@@ -41,10 +51,15 @@ public :
 		f->execute();
 	}
 
-	/*pair<int,int> getPosBateaux(int joueur)
+	int getXBateau(int joueur)
 	{
-		return f->getPosBateaux(joueur);
-	}*/
+		return f->getXBateau(joueur);
+	}
+
+	int getYBateau(int joueur)
+	{
+		return f->getYBateau(joueur);
+	}
 
 	int getNbTresors(int joueur)
 	{

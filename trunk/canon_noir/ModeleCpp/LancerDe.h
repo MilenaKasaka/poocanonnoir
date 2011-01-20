@@ -1,4 +1,12 @@
-﻿#ifndef LANCER_DE_H
+﻿/**
+* \file LancerDe.h
+* \brief Fichier d'en-tete decrivant la classe LancerDe
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
+#ifndef LANCER_DE_H
 #define LANCER_DE_H
 
 #include <vector>

@@ -1,3 +1,11 @@
+/**
+* \file Case.cpp
+* \brief Fichier definissant les fonctions de la classe Case
+* \author Sophie Le Corre
+* \author Gregoire Lecourt
+* \version 1.0
+* \date 26/01/2011
+*/
 #include "Case.h"
 
 void Case::prendreTresor()
