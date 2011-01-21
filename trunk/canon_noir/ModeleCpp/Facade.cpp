@@ -56,22 +56,22 @@ int Facade::getTypeBateau(int joueur)
 
 int Facade::getXBateau(int joueur)
 {
-	return 0;
+	return moteur->getPosJoueur(joueur).first;
 }
 
 int Facade::getYBateau(int joueur)
 {
-	return moteur->getPosJoueurCourant().first;
+	return moteur->getPosJoueur(joueur).second;
 }
 
 int Facade::getNbTresors(int joueur)
 {
-	return moteur->getPosJoueurCourant().second;
+	return moteur->getNbTresors(joueur);
 }
 
 int Facade::getTypeCase(int x, int y)
 {
-	return 0;
+	return moteur->getTypeCase(x,y);
 }
 
 void Facade::initialiserTir(int angle, int puissance)

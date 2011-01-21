@@ -25,22 +25,23 @@ void Bateau::init_port(int port)
 		posY = 0;
 		break;
 	case 1:
-		posX = LARGEUR;
+		posX = LARGEUR-1;
 		posY = 0;
 		break;
 	case 2:
-		posX = LARGEUR;
-		posY = HAUTEUR;
+		posX = LARGEUR-1;
+		posY = HAUTEUR-1;
 		break;
 	case 3:
 		posX = 0;
-		posY = HAUTEUR;
+		posY = HAUTEUR-1;
 		break;
 	default:
 		posX = 0;
 		posY = 0;
 		break;
 	}
+	//cout << "Port " << port << " : bateau initialise a la position (" << posX << "," << posY << ")" <<endl; 
 }
 
 void Bateau::ajouterTresor()

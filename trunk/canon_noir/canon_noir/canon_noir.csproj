@@ -62,8 +62,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="RepresCase.cs" />
-    <Compile Include="RepresCases.cs" />
     <Page Include="Initialisation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

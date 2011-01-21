@@ -40,7 +40,7 @@ void Moteur::initPorts()
 	{
 		(*it).init_port(i);
 		i++;
-	}
+	}	
 }
 
 bool Moteur::dispoLancerDe()
@@ -96,6 +96,7 @@ int Moteur::getNbJoueurs()
 void Moteur::initJoueurs(int size)
 {
 	joueurs.resize(size);
+	initPorts();
 	for (int i=0 ; i<size ; i++)
 	{
 		joueurs[i].initBateaux(size);
@@ -127,6 +128,11 @@ vector<pair<int,int> > Moteur::getCooBateaux()
 		coo.push_back((*it).getPosBateau());
 	}
 	return coo;
+}
+
+int Moteur::getNbTresors(int joueur)
+{
+	return joueurs[joueur].getNbTresorPort();
 }
 
 Map* Moteur::getMap()
@@ -168,6 +174,11 @@ TypeBateau Moteur::getTypeBateau(int joueur)
 pair<int,int> Moteur::getPosJoueurCourant()
 {
 	return joueurs[joueurCourant].getPosBateau();
+}
+
+pair<int,int> Moteur::getPosJoueur(int i)
+{
+	return joueurs[i].getPosBateau();
 }
 
 TypeCase Moteur::getTypeCase(int x, int y)

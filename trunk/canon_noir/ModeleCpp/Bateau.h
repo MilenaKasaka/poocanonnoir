@@ -9,6 +9,7 @@
 #ifndef BATEAU_H
 #define BATEAU_H
 
+#include <iostream>
 #include <utility>
 #include "enumerations.h"
 
