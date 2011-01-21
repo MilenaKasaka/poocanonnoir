@@ -33,6 +33,10 @@ namespace TestWrapper
             Console.WriteLine("Dispo lancer de = " + moteur.dispoLancerDe());
             Console.WriteLine("Dispo choix case = " + moteur.dispoChoixCase());
 
+            Console.WriteLine("Nombre de tresor du joueur 1 : " + moteur.getNbTresors(0));
+            Console.WriteLine("Nombre de tresor du joueur 2 : " + moteur.getNbTresors(1));
+            Console.WriteLine("Nombre de tresor du joueur 3 : " + moteur.getNbTresors(2));
+
             while (true) ;
         }
     }

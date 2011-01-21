@@ -49,7 +49,9 @@ namespace canon_noir
             int nbLig = moteur.getNbLignes();
             int nbCol = moteur.getNbColonnes();
 
-            tabImg = new Image[nbLig, nbCol];
+            Console.WriteLine("nbLig = " + nbLig + " - nbCol = " + nbCol);
+
+            tabImg = new Image[nbCol, nbLig];
 
             for (int i = 0; i < nbLig; i++)
             {
@@ -60,14 +62,14 @@ namespace canon_noir
                 grid1.ColumnDefinitions.Add(new ColumnDefinition());
             }
 
-            for (int i = 0; i < nbLig; i++)
+            for (int i = 0; i < nbCol; i++)
             {
-                for (int j = 0; j < nbCol; j++)
+                for (int j = 0; j < nbLig; j++)
                 {
                     tabImg[i, j] = new Image();
-                    tabImg[i, j].Source = new BitmapImage(new Uri("/canon_noir;component/images/plateau.jpg", UriKind.RelativeOrAbsolute));
-                    Grid.SetRow(tabImg[i, j], i);
-                    Grid.SetColumn(tabImg[i, j], j);
+                    //tabImg[i, j].Source = new BitmapImage(new Uri("/canon_noir;component/images/plateau.jpg", UriKind.RelativeOrAbsolute));
+                    Grid.SetRow(tabImg[i, j], j);
+                    Grid.SetColumn(tabImg[i, j], i);
                     grid1.Children.Add(tabImg[i, j]);
                 }
             }
@@ -85,7 +87,6 @@ namespace canon_noir
                 switch (typeb)
                 {
                     case (int)TypeBateau.CARAVELLE :
-                        Console.WriteLine("Caravelle !");
                         tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara.png", UriKind.RelativeOrAbsolute));
                         
                         break;
