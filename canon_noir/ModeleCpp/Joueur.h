@@ -23,9 +23,12 @@ class Joueur
 		int nbTresorPort; // nombre de tresors ramenes au port
 		int bateauCourant;
 		vector<Bateau> bateaux;
+		int numPort;
 
 	public :
 		Joueur();
+
+		void init_port(int port);
 		/*
 		Initialise le nombre de bateaux en fonction du nombre de joueurs :
 		2 si le nombre de joueurs est de 2
@@ -40,6 +43,7 @@ class Joueur
 		pair<int,int> getPosBateau();
 
 		int getNbTresorPort() const;
+		int getNumPort() const;
 
 		void recevoirTir();
 
@@ -49,5 +53,6 @@ inline int Joueur::getNbBateaux() const { return bateaux.size() ; }
 inline TypeBateau Joueur::getTypeBateau() { return bateaux[bateauCourant].getType(); }
 inline pair<int,int> Joueur::getPosBateau() { return bateaux[bateauCourant].getPosition(); }
 inline int Joueur::getNbTresorPort() const { return nbTresorPort ; }
+inline int Joueur::getNumPort() const { return numPort ; }
 
 #endif

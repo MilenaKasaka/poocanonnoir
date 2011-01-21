@@ -4,7 +4,6 @@
         Title="MainWindow" Height="650" Width="1000">
     <Canvas Name="canvas1">
         
-        <Button Name="btn_Des"></Button>
            
         <Image Margin="170,30,10,10" Width="800" Stretch="UniformToFill" Name="plateau" Source="/canon_noir;component/images/plateau.jpg" Canvas.Left="-4" Canvas.Top="-18" />
         <Grid Canvas.Left="182" Canvas.Top="33" Height="569" Name="grid1" Width="796">
@@ -32,10 +31,16 @@
                 <ColumnDefinition Width="74" />
             </Grid.ColumnDefinitions>-->
         </Grid>
-        <TextBlock Canvas.Left="15" Canvas.Top="12" Height="228" Name="textBlock1" Text="" Width="148" />
-        <StackPanel Orientation="Vertical" Canvas.Left="63" Canvas.Top="264">
-            <Image Height="43" Source="/canon_noir;component/images/two_red_dice_01.png" Width="47" />
-            <TextBlock Text="Dés" HorizontalAlignment="Center" FontSize="10" />
+
+        <StackPanel Canvas.Left="3" Canvas.Top="3" Height="596" Name="stackPanel1" Width="160">
+            <TextBlock Canvas.Left="15" Canvas.Top="12" Height="228" Name="textBlock1" Text="" Width="148" />
+
+            <Button Name="btn_Des" Click="btn_Des_Click">
+                <StackPanel Orientation="Vertical" Canvas.Left="63" Canvas.Top="264">
+                    <Image Height="43" Source="/canon_noir;component/images/two_red_dice_01.png" Width="47" />
+                    <TextBlock Text="Dés" HorizontalAlignment="Center" FontSize="10" />
+                </StackPanel>
+            </Button>
         </StackPanel>
     </Canvas>
 </Window>
