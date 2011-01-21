@@ -38,6 +38,7 @@ class Moteur
 		vector<Joueur> joueurs;
 
 		void initEtats();
+		void initPorts();
 
 	public :
 

@@ -65,7 +65,7 @@ namespace canon_noir
                 for (int j = 0; j < nbCol; j++)
                 {
                     tabImg[i, j] = new Image();
-                    //tabImg[i, j].Source = new BitmapImage(new Uri("/canon_noir;component/images/plateau.jpg", UriKind.RelativeOrAbsolute));
+                    tabImg[i, j].Source = new BitmapImage(new Uri("/canon_noir;component/images/plateau.jpg", UriKind.RelativeOrAbsolute));
                     Grid.SetRow(tabImg[i, j], i);
                     Grid.SetColumn(tabImg[i, j], j);
                     grid1.Children.Add(tabImg[i, j]);
@@ -81,11 +81,12 @@ namespace canon_noir
                 int typeb = moteur.getTypeBateau(i);
                 int posX = moteur.getXBateau(i);
                 int posY = moteur.getYBateau(i);
+                Console.WriteLine("X = " + posX + " - Y= " + posY);          
                 switch (typeb)
                 {
                     case (int)TypeBateau.CARAVELLE :
                         Console.WriteLine("Caravelle !");
-                        tabImg[posX, posY].Source = new BitmapImage(new Uri("/canon_noir;component/images/cara.png", UriKind.RelativeOrAbsolute));
+                        tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara.png", UriKind.RelativeOrAbsolute));
                         
                         break;
                     case (int)TypeBateau.FREGATE :
@@ -96,6 +97,17 @@ namespace canon_noir
                         break;
                 }
             }
+        }
+
+        private void btn_Des_Click(object sender, RoutedEventArgs e)
+        {
+            moteur.execute();
+            int de1 = moteur.getDe1();
+            int de2 = moteur.getDe2();
+            string msg = "de1 = " + de1 + " - de2 = " + de2; 
+            MessageBox.Show(msg);
+            if (!moteur.dispoLancerDe())
+                btn_Des.IsEnabled = false;
         }
     }
 }

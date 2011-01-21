@@ -32,6 +32,17 @@ void Moteur::initEtats()
 	etats[TIR_BORDURE] = new TirBordure(this);
 }
 
+void Moteur::initPorts()
+{
+	int i=0;
+	vector<Joueur>::iterator it;
+	for(it = joueurs.begin() ; it!=joueurs.end(); it++)
+	{
+		(*it).init_port(i);
+		i++;
+	}
+}
+
 bool Moteur::dispoLancerDe()
 {
 	return (etatCourant == LANCER_DE);
