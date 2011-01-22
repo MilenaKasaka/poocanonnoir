@@ -1,12 +1,12 @@
 ﻿<Window x:Class="canon_noir.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="650" Width="1000">
+        Title="MainWindow" Height="600" Width="900">
     <Canvas Name="canvas1">
         
            
-        <Image Margin="170,30,10,10" Width="800" Stretch="UniformToFill" Name="plateau" Source="/canon_noir;component/images/plateau.jpg" Canvas.Left="-4" Canvas.Top="-18" />
-        <Grid Canvas.Left="182" Canvas.Top="33" Height="569" Name="grid1" Width="796">
+        <Image Margin="170,30,10,10" Width="700" Stretch="UniformToFill" Name="plateau" Source="/canon_noir;component/images/plateau.jpg" Canvas.Left="-4" Canvas.Top="-18" />
+        <Grid Canvas.Left="187" Canvas.Top="36" Height="472" Name="grid1" Width="663">
             <!--<Grid.RowDefinitions>
                 <RowDefinition Height="70" />
                 <RowDefinition Height="68" />

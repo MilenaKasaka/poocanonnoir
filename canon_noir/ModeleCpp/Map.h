@@ -25,13 +25,13 @@ class Map
 
 	public :
 		Map();
-		vector<Case> getCases() const;
+		vector<Case>* getCases();
 		Case* getCase(int x, int y);
 		TypeCase getTypeCase(int x, int y);
 		// Retourne la liste des cases sur lesquelles il y a un bateau
 };
 
-inline vector<Case> Map::getCases() const { return cases; }
+inline vector<Case>* Map::getCases() { return &cases; }
 
 class coo_find { // objet fonction de type prédicat
 pair<int,int> coo;
