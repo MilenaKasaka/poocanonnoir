@@ -84,11 +84,27 @@ namespace canon_noir
                 int typeb = moteur.getTypeBateau(i);
                 int posX = moteur.getXBateau(i);
                 int posY = moteur.getYBateau(i);
-                Console.WriteLine("X = " + posX + " - Y= " + posY);          
+                //Console.WriteLine("X = " + posX + " - Y= " + posY);          
                 switch (typeb)
                 {
                     case (int)TypeBateau.CARAVELLE :
-                        tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara.png", UriKind.RelativeOrAbsolute));
+                        switch(i)
+                        {
+                            case 0 :
+                                tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara1.png", UriKind.RelativeOrAbsolute));
+                                break;
+                            case 1 :
+                                tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara2.png", UriKind.RelativeOrAbsolute));
+                                break;
+                            case 2:
+                                tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara3.png", UriKind.RelativeOrAbsolute));
+                                break;
+                            case 3:
+                                tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara4.png", UriKind.RelativeOrAbsolute));
+                                break;
+                            default:
+                                break;
+                        }
                         
                         break;
                     case (int)TypeBateau.FREGATE :
@@ -98,6 +114,27 @@ namespace canon_noir
                     default :
                         break;
                 }
+            }
+        }
+
+        private void afficheCasesAccessibles()
+        {
+            if (moteur.dispoChoixCase())
+            {
+                // Mettre en évidence les cases accessibles
+                /*int nbLig = moteur.getNbLignes();
+                int nbCol = moteur.getNbColonnes();
+                for (int i = 0; i < nbCol; i++)
+                {
+                    for (int j = 0; j < nbLig; j++)
+                    {
+                        if(moteur.estAccessible(i,j))*/
+                            
+                
+            }
+            else
+            {
+                // Remettre toutes les cases normales
             }
         }
 
