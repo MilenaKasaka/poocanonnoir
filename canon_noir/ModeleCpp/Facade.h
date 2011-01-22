@@ -37,9 +37,14 @@ class DLL Facade
 		void initMoteur();
 		void execute();
 
+		int getDe1();
+		int getDe2();
+		bool getChoixPremier();
+
 		int getNbLignes();
 		int getNbColonnes();
 		int getNbJoueurs();
+		int getJoueurCourant();
 		void initJoueurs(int size);
 
 		int getTypeBateau(int joueur);
@@ -48,8 +53,7 @@ class DLL Facade
 		int getNbTresors(int joueur);
 		int getTypeCase(int x, int y);
 		void initialiserTir(int angle, int puissance);
-		int getDe1();
-		int getDe2();
+
 		bool estAccessible(int x, int y);
 		
 		// Actions disponibles sur l'interface

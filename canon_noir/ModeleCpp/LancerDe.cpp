@@ -9,14 +9,25 @@
 #include "LancerDe.h"
 #include "Moteur.h"
 
-LancerDe::LancerDe(Moteur* m) : State(m)
+LancerDe::LancerDe(Moteur* m) : State(m), cptJoueur(0)
 {
 	srand ( time(NULL) );
+	tabScores.resize(moteur->getNbJoueurs());
 }
 
 void LancerDe::gerer()
 {
-	tirerDes();
+	if (moteur->getPremierInit())
+	{
+		if (moteur->getChoixPremier())
+			moteur->choixPremierFini();
+		tirerDes();
+		moteur->setEtatCourant(DEPLACEMENT_BATEAU);
+	}
+	else
+	{
+		selectionPremierJoueur();
+	}
 }
 
 void LancerDe::tirerDes()
@@ -32,9 +43,33 @@ void LancerDe::tirerDes()
 	{
 		moteur->setLancerDe(make_pair(lancer1,0));
 	}
-	
-	if (moteur->getPremierInit())
-		moteur->setEtatCourant(DEPLACEMENT_BATEAU);
-	else
+}
+
+void LancerDe::selectionPremierJoueur()
+{
+	tirerDes();
+	pair<int,int> lancerDe = moteur->getLancerDe();
+	int sommeDes = lancerDe.first + lancerDe.second;
+	tabScores.push_back(sommeDes);
+	cptJoueur++;
+	if (cptJoueur == moteur->getNbJoueurs())
+	{
+		int maxScore = 0;
+		int premJoueur = 0;
+		for (int i=0; i<tabScores.size(); i++)
+		{
+			if (tabScores[i] > maxScore)
+			{
+				maxScore = tabScores[i];
+				premJoueur = i;
+			}
+		}
 		moteur->setPremierInit();
+		moteur->setNumJoueurCourant(premJoueur);
+	}
+	else
+	{
+		moteur->joueurSuivant();
+	}
+
 }

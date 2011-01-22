@@ -8,7 +8,7 @@
 */
 #include "Moteur.h"
 
-Moteur::Moteur() : joueurCourant(0), resLancerDe(make_pair(0,0)), etatCourant(ATTENTE_NB_JOUEURS), premierInit(false)
+Moteur::Moteur() : joueurCourant(0), resLancerDe(make_pair(0,0)), etatCourant(ATTENTE_NB_JOUEURS), premierInit(false), choixPremier(false)
 {
 	initEtats();
 }
@@ -86,6 +86,12 @@ void Moteur::setLancerDe(pair<int,int> lancer)
 void Moteur::setPremierInit()
 {
 	premierInit = true;
+	choixPremier = true;
+}
+
+void Moteur::choixPremierFini()
+{
+	choixPremier = false;
 }
 
 int Moteur::getNbJoueurs()
@@ -112,6 +118,16 @@ Joueur* Moteur::getJoueur(int i)
 Joueur* Moteur::getJoueurCourant()
 {
 	return (&joueurs[joueurCourant]);
+}
+
+int Moteur::getNumJoueurCourant()
+{
+	return joueurCourant;
+}
+
+void Moteur::setNumJoueurCourant(int i)
+{
+	joueurCourant = i;
 }
 
 void Moteur::joueurSuivant()
