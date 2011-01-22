@@ -20,9 +20,11 @@ class LancerDe : public State
 {
 
 	private :
-
+		int cptJoueur; // indice du joueur qui lance le de pour tenter de jouer le premier
+		vector<int> tabScores; // tableau des lancers de des pour la selection du premier joueur
 		vector <pair <int,int> > casesAccessibles();
 		void tirerDes();
+		void selectionPremierJoueur();
 
 	public :
 

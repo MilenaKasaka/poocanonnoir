@@ -36,6 +36,11 @@ public :
 		return f->getNbJoueurs();
 	}
 
+	int getJoueurCourant()
+	{
+		return f->getJoueurCourant();
+	}
+
 	void initJoueurs(int size)
 	{
 		f->initJoueurs(size);
@@ -84,6 +89,11 @@ public :
 	int getDe2()
 	{
 		return f->getDe2();
+	}
+
+	bool getChoixPremier()
+	{
+		return f->getChoixPremier();
 	}
 
 	bool estAccessible(int x, int y)

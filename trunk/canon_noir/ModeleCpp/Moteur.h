@@ -33,6 +33,7 @@ class Moteur
 		vector<State* > etats;
 		int etatCourant;
 		bool premierInit; // permet de différencier le lancer permettant de selectionner le 1er joueur
+		bool choixPremier ; // vrai seulement au moment precis au le premier joueur vient d'etre selectionne
 		vector<Case> casesAccessibles;
 		Map map;
 		vector<Joueur> joueurs;
@@ -62,6 +63,8 @@ class Moteur
 		pair<int,int> getLancerDe() const;
 		void setPremierInit();
 		bool getPremierInit() const;
+		void choixPremierFini();
+		bool getChoixPremier() const;
 
 		// JOUEURS
 		int getNbJoueurs();
@@ -69,6 +72,8 @@ class Moteur
 		void initJoueurs(int size);
 		Joueur* getJoueur(int i);
 		Joueur* getJoueurCourant();
+		int getNumJoueurCourant();
+		void setNumJoueurCourant(int i);
 		void joueurSuivant();
 		vector<pair<int,int> > getCooBateaux();
 		int getNbTresors(int joueur);
@@ -89,5 +94,6 @@ class Moteur
 inline int Moteur::getEtatCourant() const { return etatCourant; }
 inline pair<int,int> Moteur::getLancerDe() const { return resLancerDe; }
 inline bool Moteur::getPremierInit() const { return premierInit; }
+inline bool Moteur::getChoixPremier() const { return choixPremier; }
 
 #endif

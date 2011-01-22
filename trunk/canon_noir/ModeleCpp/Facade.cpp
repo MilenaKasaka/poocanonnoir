@@ -44,6 +44,11 @@ int Facade::getNbJoueurs()
 	return moteur->getNbJoueurs();
 }
 
+int Facade::getJoueurCourant()
+{
+	return moteur->getNumJoueurCourant();
+}
+
 void Facade::initJoueurs(int size)
 {
 	moteur->initJoueurs(size);
@@ -86,6 +91,11 @@ int Facade::getDe1()
 int Facade::getDe2()
 {
 	return moteur->getLancerDe().second;
+}
+
+bool Facade::getChoixPremier()
+{
+	return moteur->getChoixPremier();
 }
 
 bool Facade::estAccessible(int x,int y)

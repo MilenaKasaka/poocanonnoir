@@ -36,12 +36,13 @@ namespace canon_noir
         private void initInfosPartie()
         {
             String infos = "DONNEES DE LA PARTIE";
+            infos += "\nJoueur courant : " + (moteur.getJoueurCourant() + 1);
             int nbJoueurs = moteur.getNbJoueurs();
             for (int i = 0; i < nbJoueurs; i++)
             {
                 infos += "\nJoueur " + (i+1) + " : " + moteur.getNbTresors(i) + " tresor(s)";
             }
-            textBlock1.Text += infos;
+            textBlock1.Text = infos;
         }
 
         private void initMap()
@@ -109,6 +110,9 @@ namespace canon_noir
             MessageBox.Show(msg);
             if (!moteur.dispoLancerDe())
                 btn_Des.IsEnabled = false;
+            if (moteur.getChoixPremier())
+                MessageBox.Show("Premier joueur choisi : le joueur " + (moteur.getJoueurCourant() + 1));
+            initInfosPartie();
         }
     }
 }
