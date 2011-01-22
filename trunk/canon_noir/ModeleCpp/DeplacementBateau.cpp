@@ -26,6 +26,7 @@ void DeplacementBateau::gerer()
 bool DeplacementBateau::caseBonneDistance(pair<int,int> cooCase)
 {
 	pair<int,int> posJoueur = moteur->getPosJoueurCourant();
+	cout << "CooCase = (" << cooCase.first << "," << cooCase.second << ") - posJoueur = (" << posJoueur.first << "," << posJoueur.second << ")" << endl; 
 	int de1 = moteur->getLancerDe().first;
 	int sommeDeuxDes = moteur->getLancerDe().first + moteur->getLancerDe().second;
 	return 
@@ -62,13 +63,14 @@ bool DeplacementBateau::caseBonneDistance(pair<int,int> cooCase)
 
 vector<Case> DeplacementBateau::casesAccessibles()
 {
-	vector<Case> casesAcc = moteur->getMap()->getCases();
+	vector<Case>* cases = moteur->getMap()->getCases();
+	vector<Case> casesAcc;
+
 	vector<Case>::iterator it;
-	for (it = casesAcc.begin() ; it!=casesAcc.end(); it++)
+	for (it = cases->begin() ; it!=cases->end(); it++)
 	{
-		//cooCase = (*it).getCoordonnees();
-		if ( ((*it).getType()== ILE) || (moteur->contientBateau(*it)) || !(caseBonneDistance((*it).getCoordonnees())) )
-			casesAcc.erase(it);
+		if ( ((*it).getType()!= ILE) && (!moteur->contientBateau(*it)) && (caseBonneDistance((*it).getCoordonnees())) )
+			casesAcc.push_back(*it);	
 	}
 
 	return casesAcc;

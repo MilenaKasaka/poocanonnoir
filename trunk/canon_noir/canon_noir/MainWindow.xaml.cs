@@ -119,32 +119,49 @@ namespace canon_noir
 
         private void afficheCasesAccessibles()
         {
+            int nbLig = moteur.getNbLignes();
+            int nbCol = moteur.getNbColonnes();
             if (moteur.dispoChoixCase())
             {
                 // Mettre en évidence les cases accessibles
-                /*int nbLig = moteur.getNbLignes();
-                int nbCol = moteur.getNbColonnes();
                 for (int i = 0; i < nbCol; i++)
                 {
                     for (int j = 0; j < nbLig; j++)
                     {
-                        if(moteur.estAccessible(i,j))*/
+                        if (moteur.estAccessible(i, j))
+                        {
+                            tabImg[i, j].Source = new BitmapImage(new Uri("/images/cadre.png", UriKind.RelativeOrAbsolute));
+                        }
+                    }
+                }
+                
                             
                 
             }
             else
             {
                 // Remettre toutes les cases normales
+                for (int i = 0; i < nbCol; i++)
+                {
+                    for (int j = 0; j < nbLig; j++)
+                    {
+                        tabImg[i, j].Source = null;
+                    }
+                }
+                initBateaux();
             }
         }
 
         private void btn_Des_Click(object sender, RoutedEventArgs e)
         {
+            // verifier que les des sont tires le bon nombre de fois
             moteur.execute();
             int de1 = moteur.getDe1();
             int de2 = moteur.getDe2();
             string msg = "de1 = " + de1 + " - de2 = " + de2; 
             MessageBox.Show(msg);
+            moteur.execute();
+            afficheCasesAccessibles();
             if (!moteur.dispoLancerDe())
                 btn_Des.IsEnabled = false;
             if (moteur.getChoixPremier())
