@@ -10,6 +10,7 @@
 #define MAP_H
 
 /// <remarks>Les cases sont stockées dans un vecteur à 2 dimensions</remarks>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include "Case.h"
