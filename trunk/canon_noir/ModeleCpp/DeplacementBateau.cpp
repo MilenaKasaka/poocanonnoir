@@ -26,10 +26,10 @@ void DeplacementBateau::gerer()
 bool DeplacementBateau::caseBonneDistance(pair<int,int> cooCase)
 {
 	pair<int,int> posJoueur = moteur->getPosJoueurCourant();
-	cout << "CooCase = (" << cooCase.first << "," << cooCase.second << ") - posJoueur = (" << posJoueur.first << "," << posJoueur.second << ")" << endl; 
+	//cout << "CooCase = (" << cooCase.first << "," << cooCase.second << ") - posJoueur = (" << posJoueur.first << "," << posJoueur.second << ")" << endl; 
 	int de1 = moteur->getLancerDe().first;
 	int sommeDeuxDes = moteur->getLancerDe().first + moteur->getLancerDe().second;
-	return 
+	bool access =
 		(
 			(	// deplacement vertical
 				(cooCase.first == posJoueur.first)
@@ -59,6 +59,37 @@ bool DeplacementBateau::caseBonneDistance(pair<int,int> cooCase)
 				)
 			)
 		);
+
+	// Déplacement diagonal => ne marche pas
+	/*int XSommet = cooCase.first;
+	int YSommet = posJoueur.second;
+	int distanceX = 0;
+	if (XSommet < posJoueur.first)
+	{
+		distanceX = posJoueur.first - XSommet;
+	}
+	else
+	{
+		distanceX = XSommet - posJoueur.first;
+	}
+
+	int distanceY = 0;
+	if (YSommet < cooCase.second)
+	{
+		distanceX = cooCase.second - YSommet;
+	}
+	else
+	{
+		distanceX = YSommet - cooCase.second;
+	}
+
+	int diag_carre = (distanceX*distanceX) + (distanceY*distanceY);
+	access = access || (diag_carre == (de1*de1)) || (diag_carre == (sommeDeuxDes*sommeDeuxDes));*/
+
+
+		/*if (access)
+			cout << "accessible !" << endl;*/
+		return access;
 }
 
 vector<Case> DeplacementBateau::casesAccessibles()
@@ -70,7 +101,10 @@ vector<Case> DeplacementBateau::casesAccessibles()
 	for (it = cases->begin() ; it!=cases->end(); it++)
 	{
 		if ( ((*it).getType()!= ILE) && (!moteur->contientBateau(*it)) && (caseBonneDistance((*it).getCoordonnees())) )
-			casesAcc.push_back(*it);	
+		{
+			casesAcc.push_back(*it);
+			cout << "(" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
+		}
 	}
 
 	return casesAcc;

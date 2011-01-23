@@ -25,6 +25,19 @@ Map::Map()
 			cptHaut++;
 		}		
 	}
+	cases[2,2].setType(ILE);
+	cases[2,3].setType(ILE);
+	cases[2,4].setType(ILE);
+	cases[3,2].setType(ILE);
+	cases[3,3].setType(ILE);
+	cases[3,4].setType(ILE);
+
+	cases[7,2].setType(ILE);
+	cases[7,3].setType(ILE);
+	cases[7,4].setType(ILE);
+	cases[8,2].setType(ILE);
+	cases[8,3].setType(ILE);
+	cases[8,4].setType(ILE);
 }
 
 TypeCase Map::getTypeCase(int x, int y)
