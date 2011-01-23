@@ -22,7 +22,7 @@ Case::Case(TypeCase t, int n) : type(t) , nbTresor(n)
 
 TypeCase Case::getType()
 {
-	return EAU;
+	return type;
 }
 
 void Case::setType(TypeCase t)

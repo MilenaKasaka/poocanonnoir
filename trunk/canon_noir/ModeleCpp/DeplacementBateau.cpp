@@ -58,6 +58,46 @@ bool DeplacementBateau::caseBonneDistance(pair<int,int> cooCase)
 					(cooCase.first == posJoueur.first - sommeDeuxDes)
 				)
 			)
+			|| // deplacement en diagonale
+			(
+				(cooCase.first == posJoueur.first + de1) 
+				&&
+				(
+					(cooCase.second == posJoueur.second + de1)
+					||
+					(cooCase.second == posJoueur.second - de1)
+				)
+			)
+			||
+			(
+				(cooCase.first == posJoueur.first - de1) 
+				&&
+				(
+					(cooCase.second == posJoueur.second + de1)
+					||
+					(cooCase.second == posJoueur.second - de1)
+				)
+			)
+			||
+			(
+				(cooCase.first == posJoueur.first + sommeDeuxDes) 
+				&&
+				(
+					(cooCase.second == posJoueur.second + sommeDeuxDes)
+					||
+					(cooCase.second == posJoueur.second - sommeDeuxDes)
+				)
+			)
+			||
+			(
+				(cooCase.first == posJoueur.first - sommeDeuxDes) 
+				&&
+				(
+					(cooCase.second == posJoueur.second + sommeDeuxDes)
+					||
+					(cooCase.second == posJoueur.second - sommeDeuxDes)
+				)
+			)
 		);
 
 	// Déplacement diagonal => ne marche pas
@@ -100,10 +140,12 @@ vector<Case> DeplacementBateau::casesAccessibles()
 	vector<Case>::iterator it;
 	for (it = cases->begin() ; it!=cases->end(); it++)
 	{
+		if ((*it).getType()== ILE)
+			cout << "Ile !!!" << endl;
 		if ( ((*it).getType()!= ILE) && (!moteur->contientBateau(*it)) && (caseBonneDistance((*it).getCoordonnees())) )
 		{
 			casesAcc.push_back(*it);
-			cout << "(" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
+			//cout << "(" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
 		}
 	}
 
