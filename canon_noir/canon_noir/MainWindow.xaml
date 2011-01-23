@@ -6,7 +6,7 @@
         
            
         <Image Margin="170,30,10,10" Width="700" Stretch="UniformToFill" Name="plateau" Source="/canon_noir;component/images/plateau.jpg" Canvas.Left="-4" Canvas.Top="-18" />
-        <Grid Canvas.Left="187" Canvas.Top="36" Height="472" Name="grid1" Width="663">
+        <Grid Canvas.Left="187" Canvas.Top="36" Height="472" Name="grid1" Width="663" MouseLeftButtonDown="grid1_MouseLeftButtonDown">
             <!--<Grid.RowDefinitions>
                 <RowDefinition Height="70" />
                 <RowDefinition Height="68" />

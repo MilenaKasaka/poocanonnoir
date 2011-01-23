@@ -171,7 +171,7 @@ bool Moteur::estAccessible(int x, int y)
 	}*/
 	for (it = casesAccessibles.begin() ; it!=casesAccessibles.end(); it++)
 	{
-		if (((*it).getCoordonnees().first == x) && ((*it).getCoordonnees().second == x))
+		if (((*it).getCoordonnees().first == x) && ((*it).getCoordonnees().second == y))
 			return true;
 	}
 	return false;

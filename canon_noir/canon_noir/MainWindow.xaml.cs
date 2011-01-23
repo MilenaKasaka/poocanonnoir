@@ -42,6 +42,7 @@ namespace canon_noir
             {
                 infos += "\nJoueur " + (i+1) + " : " + moteur.getNbTresors(i) + " tresor(s)";
             }
+            infos += "\nDés : " + moteur.getDe1() + " - " + moteur.getDe2();
             textBlock1.Text = infos;
         }
 
@@ -119,6 +120,7 @@ namespace canon_noir
 
         private void afficheCasesAccessibles()
         {
+            //MessageBox.Show("Je passe ici !");
             int nbLig = moteur.getNbLignes();
             int nbCol = moteur.getNbColonnes();
             if (moteur.dispoChoixCase())
@@ -128,8 +130,10 @@ namespace canon_noir
                 {
                     for (int j = 0; j < nbLig; j++)
                     {
+                        //MessageBox.Show("Case (" + i + "," + j + ")");
                         if (moteur.estAccessible(i, j))
                         {
+                            //MessageBox.Show("Je passe ici !");
                             tabImg[i, j].Source = new BitmapImage(new Uri("/images/cadre.png", UriKind.RelativeOrAbsolute));
                         }
                     }
@@ -138,7 +142,7 @@ namespace canon_noir
                             
                 
             }
-            else
+            /*else
             {
                 // Remettre toutes les cases normales
                 for (int i = 0; i < nbCol; i++)
@@ -149,7 +153,7 @@ namespace canon_noir
                     }
                 }
                 initBateaux();
-            }
+            }*/
         }
 
         private void btn_Des_Click(object sender, RoutedEventArgs e)
@@ -160,13 +164,25 @@ namespace canon_noir
             int de2 = moteur.getDe2();
             string msg = "de1 = " + de1 + " - de2 = " + de2; 
             MessageBox.Show(msg);
-            moteur.execute();
-            afficheCasesAccessibles();
-            if (!moteur.dispoLancerDe())
-                btn_Des.IsEnabled = false;
             if (moteur.getChoixPremier())
                 MessageBox.Show("Premier joueur choisi : le joueur " + (moteur.getJoueurCourant() + 1));
+            if (!moteur.dispoLancerDe())
+                btn_Des.IsEnabled = false;
             initInfosPartie();
+            if (moteur.dispoChoixCase())
+            {
+                moteur.execute();
+                afficheCasesAccessibles();
+            }         
+            
+        }
+
+        private void grid1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Point p = e.GetPosition(grid1);
+            double x = p.X;
+            double y = p.Y;
+
         }
     }
 }
