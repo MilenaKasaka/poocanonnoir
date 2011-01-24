@@ -23,6 +23,7 @@ namespace canon_noir
         enum TypeBateau { CARAVELLE, FREGATE, RADEAU };
         WrapperMoteur moteur;
         Image[,] tabImg;
+        double largeurCase, hauteurCase = 0;
 
         public MainWindow(WrapperMoteur m)
         {
@@ -31,6 +32,7 @@ namespace canon_noir
             initInfosPartie();
             initMap();
             initBateaux();
+            initMesuresCases();
         }
 
         private void initInfosPartie()
@@ -43,6 +45,9 @@ namespace canon_noir
                 infos += "\nJoueur " + (i+1) + " : " + moteur.getNbTresors(i) + " tresor(s)";
             }
             infos += "\nDés : " + moteur.getDe1() + " - " + moteur.getDe2();
+            // a commenter
+            //infos += "\nPosition joueur courant : \n(" + moteur.getXBateau(moteur.getJoueurCourant()) + "," + moteur.getYBateau(moteur.getJoueurCourant()) + ")";
+            //infos += "\nlargeurCase = " + largeurCase + " - hauteurCase = " + hauteurCase;
             textBlock1.Text = infos;
         }
 
@@ -118,6 +123,19 @@ namespace canon_noir
             }
         }
 
+        void initMesuresCases()
+        {
+            largeurCase = grid1.Width / moteur.getNbColonnes();
+            hauteurCase = grid1.Height / moteur.getNbLignes();
+        }
+
+        private KeyValuePair<int, int> getCase(double x, double y)
+        {
+            int posX = (int)(x / largeurCase);
+            int posY = (int)(y / hauteurCase);
+            return new KeyValuePair<int,int>(posX,posY);
+        }
+
         private void afficheCasesAccessibles()
         {
             //MessageBox.Show("Je passe ici !");
@@ -129,10 +147,10 @@ namespace canon_noir
                 for (int i = 0; i < nbCol; i++)
                 {
                     for (int j = 0; j < nbLig; j++)
-                    {
-                        //MessageBox.Show("Case (" + i + "," + j + ")");
+                    {               
                         if (moteur.estAccessible(i, j))
                         {
+                            //MessageBox.Show("Case (" + i + "," + j + ")");
                             //MessageBox.Show("Je passe ici !");
                             tabImg[i, j].Source = new BitmapImage(new Uri("/images/cadre.png", UriKind.RelativeOrAbsolute));
                         }
@@ -154,6 +172,21 @@ namespace canon_noir
                 }
                 initBateaux();
             }*/
+        }
+
+        // efface la carte
+        private void resetCarte()
+        {
+            int nbLig = moteur.getNbLignes();
+            int nbCol = moteur.getNbColonnes();
+            // Remettre toutes les cases normales
+            for (int i = 0; i < nbCol; i++)
+            {
+                for (int j = 0; j < nbLig; j++)
+                {
+                    tabImg[i, j].Source = null;
+                }
+            }
         }
 
         private void btn_Des_Click(object sender, RoutedEventArgs e)
@@ -179,9 +212,29 @@ namespace canon_noir
 
         private void grid1_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Point p = e.GetPosition(grid1);
-            double x = p.X;
-            double y = p.Y;
+            if (moteur.dispoChoixCase())
+            {
+                Point p = e.GetPosition(grid1);
+                double x = p.X;
+                double y = p.Y;
+                KeyValuePair<int, int> c = getCase(x, y);
+                if (moteur.estAccessible(c.Key, c.Value))
+                {
+                    /*int anc_x = moteur.getXBateau(moteur.getJoueurCourant());
+                    int anc_y = moteur.getYBateau(moteur.getJoueurCourant());
+                    tabImg[anc_x,anc_y].Source = null;*/
+                    resetCarte();
+                    moteur.deplacerBateau(c.Key, c.Value);
+                    initBateaux();
+                    
+                    if (moteur.dispoLancerDe())
+                    {
+                        btn_Des.IsEnabled = true;
+                    }
+                }
+           
+                //MessageBox.Show("X = " + x + " - Y = " + y + "\nCase (" + c.Key + "," + c.Value + ")");
+            }
 
         }
     }

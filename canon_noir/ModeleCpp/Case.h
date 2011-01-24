@@ -34,12 +34,12 @@ class Case
 
 	public :
 		Case();
-		void prendreTresor();
 		Case(TypeCase t, int n);
 		TypeCase getType();
 		void setType(TypeCase t);
 		int getNbTresor();
 		void setNbTresor(int n);
+		bool prendreTresor();
 		pair<int,int> getCoordonnees() const;
 		void setCoordonnees(pair<int,int> c);
 };

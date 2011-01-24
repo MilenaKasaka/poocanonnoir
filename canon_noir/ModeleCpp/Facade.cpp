@@ -74,6 +74,16 @@ int Facade::getNbTresors(int joueur)
 	return moteur->getNbTresors(joueur);
 }
 
+int Facade::getXPort(int joueur)
+{
+	return moteur->getPosPort(joueur).first;
+}
+
+int Facade::getYPort(int joueur)
+{
+	return moteur->getPosPort(joueur).second;
+}
+
 int Facade::getTypeCase(int x, int y)
 {
 	return moteur->getTypeCase(x,y);
@@ -102,6 +112,13 @@ bool Facade::estAccessible(int x,int y)
 {
 	return moteur->estAccessible(x,y);
 }
+
+void Facade::deplacerBateau(int x, int y)
+{
+	moteur->deplacerBateau(x,y);
+}
+
+// Actions disponibles sur l'interface
 
 bool Facade::dispoLancerDe()
 {

@@ -8,9 +8,6 @@
 */
 #include "Case.h"
 
-void Case::prendreTresor()
-{
-}
 
 Case::Case() : type(EAU) , nbTresor(0), altitude(0)
 {
@@ -18,6 +15,8 @@ Case::Case() : type(EAU) , nbTresor(0), altitude(0)
 
 Case::Case(TypeCase t, int n) : type(t) , nbTresor(n)
 {
+	if (t == TRESOR)
+		nbTresor = 4;
 }
 
 TypeCase Case::getType()
@@ -28,6 +27,8 @@ TypeCase Case::getType()
 void Case::setType(TypeCase t)
 {
 	type = t;
+	if (t == TRESOR)
+		nbTresor = 4;
 }
 
 int Case::getNbTresor()
@@ -38,6 +39,17 @@ int Case::getNbTresor()
 void Case::setNbTresor(int n)
 {
 	nbTresor = n;
+}
+
+bool Case::prendreTresor()
+{
+	if(nbTresor > 0)
+	{
+		nbTresor--;
+		return true;
+	}
+	else
+		return false;
 }
 
 void Case::setCoordonnees(pair<int,int> c)

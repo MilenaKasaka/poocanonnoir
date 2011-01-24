@@ -28,6 +28,7 @@ class Bateau
 		int posY;
 		bool tresor;
 		TypeBateau type;
+		pair<int,int> posPort;
 
 	public :
 		Bateau();
@@ -39,7 +40,10 @@ class Bateau
 		void setType(TypeBateau t);
 		void retrograderType();
 		pair<int,int> getPosition();
+		pair<int,int> getPosPort();
 
 }; 
+
+inline pair<int,int> Bateau::getPosPort() { return posPort; }
 
 #endif

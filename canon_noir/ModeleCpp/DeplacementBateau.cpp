@@ -141,11 +141,11 @@ vector<Case> DeplacementBateau::casesAccessibles()
 	for (it = cases->begin() ; it!=cases->end(); it++)
 	{
 		if ((*it).getType()== ILE)
-			cout << "Ile !!!" << endl;
+			cout << "Ile !!! (" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
 		if ( ((*it).getType()!= ILE) && (!moteur->contientBateau(*it)) && (caseBonneDistance((*it).getCoordonnees())) )
 		{
 			casesAcc.push_back(*it);
-			//cout << "(" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
+			cout << "(" << (*it).getCoordonnees().first << "," << (*it).getCoordonnees().second << ")" << endl;
 		}
 	}
 

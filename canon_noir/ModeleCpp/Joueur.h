@@ -36,14 +36,17 @@ class Joueur
 		*/
 		void initBateaux(int nbJoueurs);		
 		void setPosBateau(int x, int y);
+		void embarquerTresor();
 		void donnerSonTresor();
 		int getNbBateaux() const;
 		// Retourne le type du bateau courant
 		TypeBateau getTypeBateau();
 		pair<int,int> getPosBateau();
 
+		bool ramenerTresor(); // retourne vrai si le joueur a gagne
 		int getNbTresorPort() const;
 		int getNumPort() const;
+		pair<int,int> getPosPort();
 
 		void recevoirTir();
 
@@ -54,5 +57,6 @@ inline TypeBateau Joueur::getTypeBateau() { return bateaux[bateauCourant].getTyp
 inline pair<int,int> Joueur::getPosBateau() { return bateaux[bateauCourant].getPosition(); }
 inline int Joueur::getNbTresorPort() const { return nbTresorPort ; }
 inline int Joueur::getNumPort() const { return numPort ; }
+inline pair<int,int> Joueur::getPosPort() { return bateaux[bateauCourant].getPosPort(); }
 
 #endif

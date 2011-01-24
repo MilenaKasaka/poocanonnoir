@@ -43,7 +43,19 @@ namespace TestWrapper
             Console.WriteLine("\nDeplacement du bateau");
             Console.WriteLine("Dispo lancer de = " + moteur.dispoLancerDe());
             Console.WriteLine("Dispo choix case = " + moteur.dispoChoixCase());
-            moteur.execute();
+            Console.WriteLine("Ancienne position : (" + moteur.getXBateau(moteur.getJoueurCourant()) + "," + moteur.getYBateau(moteur.getJoueurCourant()) + ")");
+            moteur.deplacerBateau(4, 4);
+
+            
+            int nbJoueurs = moteur.getNbJoueurs();
+            for (int i = 0; i < nbJoueurs; i++)
+            {
+                int posX = moteur.getXBateau(i);
+                int posY = moteur.getYBateau(i);
+                Console.WriteLine("Nouvelle position du joueur " + i + " : (" + posX + "," + posY + ")");
+            }
+
+            //moteur.execute();
 
             /*Console.WriteLine("Nombre de tresor du joueur 1 : " + moteur.getNbTresors(0));
             Console.WriteLine("Nombre de tresor du joueur 2 : " + moteur.getNbTresors(1));

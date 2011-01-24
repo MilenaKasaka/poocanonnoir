@@ -151,6 +151,11 @@ int Moteur::getNbTresors(int joueur)
 	return joueurs[joueur].getNbTresorPort();
 }
 
+pair<int,int> Moteur::getPosPort(int joueur)
+{
+	return joueurs[joueur].getPosPort();
+}
+
 Map* Moteur::getMap()
 {
 	return &map;
@@ -213,4 +218,29 @@ bool Moteur::contientBateau(Case c)
 			return true;
 	}
 	return false;
+}
+
+void Moteur::deplacerBateau(int x, int y)
+{
+	joueurs[joueurCourant].setPosBateau(x,y);
+	if (map.getCase(x,y)->getCoordonnees() == joueurs[joueurCourant].getPosPort())
+	{
+		if(joueurs[joueurCourant].ramenerTresor())
+		{
+			// JEU FINI
+		}
+	}
+	if ((map.getCase(x,y))->prendreTresor())
+	{
+		joueurs[joueurCourant].embarquerTresor();
+	}
+	if (map.getTypeCase(x,y) == CANON)
+	{
+		setEtatCourant(TIR_CASE_CANON);
+	}
+	else
+	{
+		joueurSuivant();
+		setEtatCourant(LANCER_DE);
+	}
 }
