@@ -9,6 +9,8 @@
 #ifndef ENUMERATIONS_H
 #define ENUMERATIONS_H
 
+#define NB_TRESORS_GAGNANT 3
+
 #define LARGEUR 11
 #define HAUTEUR 8
 #define NB_JOUEURS_MAX 4

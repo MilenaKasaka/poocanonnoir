@@ -38,9 +38,23 @@ void Joueur::setPosBateau(int x, int y)
 	bateaux[bateauCourant].setPosition(x,y);
 }
 
+void Joueur::embarquerTresor()
+{
+	bateaux[bateauCourant].ajouterTresor();
+}
+
 void Joueur::donnerSonTresor()
 {
 	bateaux[bateauCourant].enleverTresor();
+}
+
+bool Joueur::ramenerTresor()
+{
+	nbTresorPort++;
+	if (nbTresorPort == NB_TRESORS_GAGNANT)
+		return true;
+	else
+		return false;
 }
 
 void Joueur::recevoirTir()

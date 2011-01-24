@@ -25,23 +25,28 @@ Map::Map()
 			cptHaut++;
 		}		
 	}
-	cases[2,2].setType(ILE);
-	cases[2,3].setType(ILE);
-	cases[2,4].setType(ILE);
-	cases[2,5].setType(ILE);
-	cases[3,2].setType(ILE);
-	cases[3,3].setType(ILE);
-	cases[3,4].setType(ILE);
-	cases[3,5].setType(ILE);
+	getCase(2,2)->setType(ILE);
+	getCase(2,3)->setType(ILE);
+	getCase(2,4)->setType(ILE);
+	getCase(2,5)->setType(ILE);
+	getCase(3,2)->setType(ILE);
+	getCase(3,3)->setType(ILE);
+	getCase(3,4)->setType(ILE);
+	getCase(3,5)->setType(ILE);
 
-	cases[7,2].setType(ILE);
-	cases[7,3].setType(ILE);
-	cases[7,4].setType(ILE);
-	cases[7,5].setType(ILE);
-	cases[8,2].setType(ILE);
-	cases[8,3].setType(ILE);
-	cases[8,4].setType(ILE);
-	cases[8,5].setType(ILE);
+	getCase(7,2)->setType(ILE);
+	getCase(7,3)->setType(ILE);
+	getCase(7,4)->setType(ILE);
+	getCase(7,5)->setType(ILE);
+	getCase(8,2)->setType(ILE);
+	getCase(8,3)->setType(ILE);
+	getCase(8,4)->setType(ILE);
+	getCase(8,5)->setType(ILE);
+
+	getCase(4,2)->setType(TRESOR);
+	getCase(4,5)->setType(TRESOR);
+	getCase(6,3)->setType(TRESOR);
+	getCase(6,6)->setType(TRESOR);
 }
 
 TypeCase Map::getTypeCase(int x, int y)
@@ -54,4 +59,11 @@ TypeCase Map::getTypeCase(int x, int y)
 		return ILE;
 	else
 		return (*it).getType();
+}
+
+Case* Map::getCase(int x, int y)
+{
+	vector<Case>::iterator it;
+	it = find_if(cases.begin(),cases.end(),coo_find(make_pair(x,y)));
+	return &(*it);
 }

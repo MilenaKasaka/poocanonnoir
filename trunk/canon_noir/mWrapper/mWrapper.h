@@ -71,6 +71,16 @@ public :
 		return f->getNbTresors(joueur);
 	}
 
+	int getXPort(int joueur)
+	{
+		return f->getXPort(joueur);
+	}
+
+	int getYPort(int joueur)
+	{
+		return f->getYPort(joueur);
+	}
+
 	int getTypeCase(int x, int y)
 	{
 		return ((int)f->getTypeCase(x,y));
@@ -99,6 +109,11 @@ public :
 	bool estAccessible(int x, int y)
 	{
 		return f->estAccessible(x,y);
+	}
+
+	void deplacerBateau(int x, int y)
+	{
+		f->deplacerBateau(x,y);
 	}
 
 	bool dispoLancerDe()

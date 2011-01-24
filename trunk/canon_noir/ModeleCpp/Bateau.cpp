@@ -40,6 +40,7 @@ void Bateau::init_port(int port)
 		posX = 0;
 		posY = 0;
 		break;
+		posPort = make_pair(posX,posY);
 	}
 	//cout << "Port " << port << " : bateau initialise a la position (" << posX << "," << posY << ")" <<endl; 
 }

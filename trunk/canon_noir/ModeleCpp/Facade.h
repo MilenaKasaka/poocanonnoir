@@ -37,24 +37,31 @@ class DLL Facade
 		void initMoteur();
 		void execute();
 
+		// DES
 		int getDe1();
 		int getDe2();
 		bool getChoixPremier();
 
-		int getNbLignes();
-		int getNbColonnes();
+		// JOUEURS
 		int getNbJoueurs();
 		int getJoueurCourant();
 		void initJoueurs(int size);
-
 		int getTypeBateau(int joueur);
 		int getXBateau(int joueur);
 		int getYBateau(int joueur);
 		int getNbTresors(int joueur);
-		int getTypeCase(int x, int y);
-		void initialiserTir(int angle, int puissance);
+		int getXPort(int joueur);
+		int getYPort(int joueur);
 
+		// MAP
+		int getNbLignes();
+		int getNbColonnes();
+		int getTypeCase(int x, int y);
 		bool estAccessible(int x, int y);
+		void deplacerBateau(int x, int y);
+
+		// TIR
+		void initialiserTir(int angle, int puissance);		
 		
 		// Actions disponibles sur l'interface
 		bool dispoLancerDe();

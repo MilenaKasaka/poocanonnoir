@@ -77,6 +77,7 @@ class Moteur
 		void joueurSuivant();
 		vector<pair<int,int> > getCooBateaux();
 		int getNbTresors(int joueur);
+		pair<int,int> getPosPort(int joueur);
 
 		// MAP
 		Map* getMap();
@@ -89,6 +90,7 @@ class Moteur
 		pair<int,int> getPosJoueur(int i);
 		TypeCase getTypeCase(int x, int y);
 		bool contientBateau(Case c); // retourne vrai si la case contient un bateau
+		void deplacerBateau(int x, int y);
 };
 
 inline int Moteur::getEtatCourant() const { return etatCourant; }
