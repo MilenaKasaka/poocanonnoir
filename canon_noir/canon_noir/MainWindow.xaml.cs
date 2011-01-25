@@ -35,6 +35,12 @@ namespace canon_noir
             initMesuresCases();
         }
 
+        public void mettreAJour()
+        {
+            initInfosPartie();
+            initBateaux();
+        }
+
         private void initInfosPartie()
         {
             String infos = "DONNEES DE LA PARTIE";
@@ -108,12 +114,17 @@ namespace canon_noir
                         else
                             tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara" + (i+1) +".png", UriKind.RelativeOrAbsolute));
                         break;
-                    
-                        
-                        break;
                     case (int)TypeBateau.FREGATE :
+                        if (moteur.dispoReglageTir() && i != moteur.getJoueurCourant())
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/fre" + (i + 1) + "_vise.png", UriKind.RelativeOrAbsolute));
+                        else
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/fre" + (i + 1) + ".png", UriKind.RelativeOrAbsolute));
                         break;
                     case (int)TypeBateau.RADEAU :
+                        if (moteur.dispoReglageTir() && i != moteur.getJoueurCourant())
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/ra" + (i + 1) + "_vise.png", UriKind.RelativeOrAbsolute));
+                        else
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/ra" + (i + 1) + ".png", UriKind.RelativeOrAbsolute));
                         break;
                     default :
                         break;
@@ -204,7 +215,12 @@ namespace canon_noir
             {
                 moteur.execute();
                 afficheCasesAccessibles();
-            }         
+                if (moteur.dispoLancerDe())
+                {
+                    btn_Des.IsEnabled = true;
+                }
+            }
+            
             
         }
 

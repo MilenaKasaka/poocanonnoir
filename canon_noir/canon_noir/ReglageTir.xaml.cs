@@ -47,8 +47,14 @@ namespace canon_noir
             int puissance = (int)comboBox2.SelectedValue;
             
             moteur.reglerTir(puissance, angle, dirX, dirY);
+            moteur.execute();
             MainWindow mw = new MainWindow(moteur);
+            mw.mettreAJour();
             mw.Show();
+            if (moteur.getResTir())
+                MessageBox.Show("Le tir a réussi !");
+            else
+                MessageBox.Show("Le tir a échoué !");
             this.Close();
         }
     }

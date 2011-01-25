@@ -40,7 +40,8 @@ void Joueur::setPosBateau(int x, int y)
 
 void Joueur::embarquerTresor()
 {
-	bateaux[bateauCourant].ajouterTresor();
+	if(bateaux[bateauCourant].getType()!= RADEAU)
+		bateaux[bateauCourant].ajouterTresor();
 }
 
 void Joueur::donnerSonTresor()

@@ -12,6 +12,6 @@ TirBordure::TirBordure(Moteur* m) : Tir(m)
 {
 }
 
-void TirBordure::gerer()
+/*void TirBordure::gerer()
 {
-}
+}*/

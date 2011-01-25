@@ -20,7 +20,7 @@ class TirCaseCanon : public Tir
 
 	public :
 		TirCaseCanon(Moteur* m);
-		void gerer();
+		//void gerer();
 
 }; 
 
