@@ -11,6 +11,10 @@
 
 #include "Tir.h"
 
+/**
+* \class TirCaseCanon
+* \brief Définit un tir à partir d'une case de type CANON
+*/
 class TirCaseCanon : public Tir
 {
 

@@ -8,7 +8,7 @@
 */
 #include "Moteur.h"
 
-Moteur::Moteur() : joueurCourant(0), resLancerDe(make_pair(0,0)), etatCourant(ATTENTE_NB_JOUEURS), premierInit(false), choixPremier(false)
+Moteur::Moteur() : joueurCourant(0), resLancerDe(make_pair(0,0)), etatCourant(ATTENTE_NB_JOUEURS), premierInit(false), choixPremier(false), ramasseTresor(false), jeuFini(false)
 {
 	initEtats();
 }
@@ -66,6 +66,11 @@ bool Moteur::dispoChoixCase()
 bool Moteur::dispoReglageTir()
 {
 	return ((etatCourant ==  TIR_CASE_CANON) || (etatCourant == TIR_BORDURE));
+}
+
+void Moteur::setRamasseTresor(bool b)
+{
+	ramasseTresor = b;
 }
 
 void Moteur::requete()
@@ -151,6 +156,11 @@ int Moteur::getNbTresors(int joueur)
 	return joueurs[joueur].getNbTresorPort();
 }
 
+bool Moteur::getTransporteTresor(int joueur)
+{
+	return joueurs[joueur].getTransporteTresor();
+}
+
 pair<int,int> Moteur::getPosPort(int joueur)
 {
 	return joueurs[joueur].getPosPort();
@@ -230,10 +240,17 @@ void Moteur::deplacerBateau(int x, int y)
 			// JEU FINI
 		}
 	}
+	// CASE TRESOR
 	if ((map.getCase(x,y))->prendreTresor())
 	{
 		joueurs[joueurCourant].embarquerTresor();
+		ramasseTresor = true;
 	}
+	else
+	{
+		ramasseTresor = false;
+	}
+	// CASE CANON
 	if (map.getTypeCase(x,y) == CANON)
 	{
 		setEtatCourant(TIR_CASE_CANON);
@@ -243,4 +260,17 @@ void Moteur::deplacerBateau(int x, int y)
 		joueurSuivant();
 		setEtatCourant(LANCER_DE);
 	}
+}
+
+void Moteur::reglerTir(int angle, int puissance, pair<int,int> direction)
+{
+	if (etatCourant == TIR_CASE_CANON)
+		((TirCaseCanon*)etats[TIR_CASE_CANON])->reglerTir(angle,puissance,direction);
+	else if (etatCourant == TIR_BORDURE)
+		((TirBordure*)etats[TIR_BORDURE])->reglerTir(angle,puissance,direction);
+}
+
+void Moteur::setResTir(bool b)
+{
+	resTir = b;
 }

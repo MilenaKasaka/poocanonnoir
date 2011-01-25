@@ -11,6 +11,10 @@
 
 #include "Tir.h"
 
+/**
+* \class TirBordure
+* \brief Définit un tir de type duel à partir d'une case à la bordure du plateau
+*/
 class TirBordure : public Tir
 {
 

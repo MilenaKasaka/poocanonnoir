@@ -47,6 +47,11 @@ Map::Map()
 	getCase(4,5)->setType(TRESOR);
 	getCase(6,3)->setType(TRESOR);
 	getCase(6,6)->setType(TRESOR);
+
+	getCase(1,4)->setType(CANON);
+	getCase(3,6)->setType(CANON);
+	getCase(7,1)->setType(CANON);
+	getCase(9,4)->setType(CANON);
 }
 
 TypeCase Map::getTypeCase(int x, int y)

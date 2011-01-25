@@ -15,6 +15,11 @@
 
 using namespace std;
 
+/**
+* \class DeplacementBateau
+* \brief Etat qui affiche les cases accessibles pour le joueur et attend que celui-ci choisisse le déplacement de son bateau
+* Calcule les cases accessibles en fonction du résultat du lancer de dé
+*/
 class DeplacementBateau : public State
 {
 	private :

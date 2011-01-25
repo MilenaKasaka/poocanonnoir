@@ -16,6 +16,10 @@
 
 using namespace std;
 
+/**
+* \class LancerDe
+* \brief Etat chargé du tirage aléatoire du résultat du lancer de dés
+*/
 class LancerDe : public State
 {
 

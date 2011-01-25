@@ -24,6 +24,10 @@
 
 using namespace std;
 
+/**
+* \class Moteur
+* \brief Classe principale du moteur qui coordonne tous les éléments de la partie modèle du jeu
+*/
 class Moteur
 {
 	private :
@@ -37,6 +41,9 @@ class Moteur
 		vector<Case> casesAccessibles;
 		Map map;
 		vector<Joueur> joueurs;
+		bool ramasseTresor;
+		bool resTir;
+		bool jeuFini;
 
 		void initEtats();
 		void initPorts();
@@ -52,6 +59,8 @@ class Moteur
 		bool dispoChoixCouleur();
 		bool dispoChoixCase();
 		bool dispoReglageTir();
+		bool getRamasseTresor() const;
+		void setRamasseTresor(bool b);
 
 		void requete();
 
@@ -77,6 +86,7 @@ class Moteur
 		void joueurSuivant();
 		vector<pair<int,int> > getCooBateaux();
 		int getNbTresors(int joueur);
+		bool getTransporteTresor(int joueur);
 		pair<int,int> getPosPort(int joueur);
 
 		// MAP
@@ -91,11 +101,21 @@ class Moteur
 		TypeCase getTypeCase(int x, int y);
 		bool contientBateau(Case c); // retourne vrai si la case contient un bateau
 		void deplacerBateau(int x, int y);
+
+		//TIR
+		void reglerTir(int angle, int puissance, pair<int,int> direction);
+		bool getResTir() const;
+		void setResTir(bool b);
+
+		bool getJeuFini() const;
 };
 
 inline int Moteur::getEtatCourant() const { return etatCourant; }
 inline pair<int,int> Moteur::getLancerDe() const { return resLancerDe; }
 inline bool Moteur::getPremierInit() const { return premierInit; }
 inline bool Moteur::getChoixPremier() const { return choixPremier; }
+inline bool Moteur::getResTir() const { return resTir; }
+inline bool Moteur::getJeuFini() const { return jeuFini; }
+inline bool Moteur::getRamasseTresor() const { return ramasseTresor; }
 
 #endif

@@ -11,6 +11,11 @@
 
 class Moteur;
 
+/**
+* \class State
+* \brief Classe abstraite qui définit un état du jeu
+* Chaque état possède une référence vers l'objet Moteur et peut ainsi y accéder et le modifier
+*/
 class State
 {
 	protected :

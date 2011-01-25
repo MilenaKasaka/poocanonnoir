@@ -33,7 +33,7 @@
         </Grid>
 
         <StackPanel Canvas.Left="3" Canvas.Top="3" Height="596" Name="stackPanel1" Width="160">
-            <TextBlock Canvas.Left="15" Canvas.Top="12" Height="228" Name="textBlock1" Text="" Width="148" />
+            <TextBlock Canvas.Left="15" Canvas.Top="12" Height="278" Name="textBlock1" Text="" Width="142" />
 
             <Button Name="btn_Des" Click="btn_Des_Click">
                 <StackPanel Orientation="Vertical" Canvas.Left="63" Canvas.Top="264">
@@ -42,5 +42,6 @@
                 </StackPanel>
             </Button>
         </StackPanel>
+        <Label Content="Cliquez sur le bateau d'un adversaire pour le viser !" Height="80" Name="label1" Width="583" FontSize="24" Canvas.Left="233" Canvas.Top="519" FontWeight="Bold" Foreground="Red" Visibility="Hidden" />
     </Canvas>
 </Window>

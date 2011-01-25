@@ -16,6 +16,11 @@
 
 using namespace std;
 
+/**
+* \class Joueur
+* \brief Represente un joueur
+* Un joueur est caracterise par un port de départ, un ou deux bateaux et un nombre de tresors ramenés à son port
+*/
 class Joueur
 {
 	private :
@@ -45,6 +50,7 @@ class Joueur
 
 		bool ramenerTresor(); // retourne vrai si le joueur a gagne
 		int getNbTresorPort() const;
+		bool getTransporteTresor();
 		int getNumPort() const;
 		pair<int,int> getPosPort();
 
