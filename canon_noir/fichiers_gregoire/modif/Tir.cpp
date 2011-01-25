@@ -70,6 +70,7 @@ pair<int,int> Tir::calculerTir() { //to be completed
 
 	list<pair<double,double> > intersections;
 	list<pair<double,double> > histogramme;
+	liste<pair<int,int> > casesTraversees;
 	list<pair<double,double> >::iterator it, it2, end;
 	double h, l, xa, ya, xb, yb;
 	unsigned int x, y, i, j;
@@ -133,35 +134,38 @@ pair<int,int> Tir::calculerTir() { //to be completed
 			h = moteur->getMap()->getCase(i,j)->getAltitude();
 			l = sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya));
 			histogramme.push_back(pair(<double,double>(l,h));
+			casesTraversees.push_back(pair<int,int>(i,j));
 		}
 	}
 	
-	list<pair<double,double> > hauteurBoulet;
+	/*list<pair<double,double> > hauteurBoulet;
 	//remplir hauteurBoulet et comparer à chaque fois la hauteur du boulet avec l'altitude de la case
+	*/
 	bool collision = false;
+	pair<int,int> res;
+	
 	if(histogramme.size() > 1) {
 		it = histogramme.begin();
 		end = histogramme.end();
-		it2 = itersections.begin();
+		it2 = casesTraversees.begin();
 		
 		h = it->second;
 		d = it->first;
 		it++;
 		
 		for(; it != end && !collision; it++, it2++) {
-			if(this->z(d) || this->z(d) <= it->second) collision = true;
+			if(this->z(d) || this->z(d) <= it->second) {
+				collision = true;
+				res = *it2;
+			}
 			d += it->first;
 		}
 		
-	}
+	}	
 	
-	pair<int,int> res;
 	if(!collision) {
 		res.first = -1;
 		res.second = -1;
-	} else {
-		res.first = intersection;
-		res.second = 0;
 	}
 	return res;
 }
