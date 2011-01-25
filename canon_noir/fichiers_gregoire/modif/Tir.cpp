@@ -113,7 +113,7 @@ pair<int,int> Tir::calculerTir() { //to be completed
 			y += inc_y;
 		}
 	}
-	
+	//intersections : contient la liste des points d'intersection entre 
 	if (intersection.size() >= 1) {
 		xb = x1;
 		yb = y1;
