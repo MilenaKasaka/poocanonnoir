@@ -20,7 +20,7 @@ class TirBordure : public Tir
 
 	public :
 		TirBordure(Moteur* m);
-		void gerer();
+		//void gerer();
 
 }; 
 

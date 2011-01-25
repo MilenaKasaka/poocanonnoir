@@ -12,6 +12,6 @@ TirCaseCanon::TirCaseCanon(Moteur* m) : Tir(m)
 {
 }
 
-void TirCaseCanon::gerer()
+/*void TirCaseCanon::gerer()
 {
-}
+}*/

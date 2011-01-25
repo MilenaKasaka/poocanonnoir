@@ -26,6 +26,7 @@ void Tir::gerer()
 	{
 		Joueur* j = joueurVise();
 		j->recevoirTir();
+		moteur->getJoueurCourant()->embarquerTresor();
 		moteur->setResTir(true);
 	}
 	else
