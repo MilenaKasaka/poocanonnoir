@@ -9,12 +9,19 @@
 #ifndef TIR_H
 #define TIR_H
 
+#include <time.h>
 #include <utility>
 #include "State.h"
 #include "enumerations.h"
+#include "Joueur.h"
 
 using namespace std;
 
+/**
+* \class Tir
+* \brief Etat chargé de calculer le résultat du tir en fonction des réglages de l'utilisateur
+* Le résultat du tir sera répercuté sur le moteur et ainsi sur l'ensemble du modèle
+*/
 class Tir : public State
 {
 	private :
@@ -24,6 +31,7 @@ class Tir : public State
 
 		pair<int,int> tirer(); // retourne l'impact du tir
 		pair<int,int> calculerTir(); // calcule la portée du tir
+		Joueur* joueurVise(); // retourne le bateau vise par le tir
 
 	public :
 

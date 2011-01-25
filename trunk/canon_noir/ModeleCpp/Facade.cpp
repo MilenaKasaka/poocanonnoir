@@ -29,6 +29,11 @@ void Facade::execute()
 	moteur->requete();
 }
 
+bool Facade::getJeuFini()
+{
+	return moteur->getJeuFini();
+}
+
 int Facade::getNbLignes()
 {
 	return HAUTEUR;
@@ -74,6 +79,11 @@ int Facade::getNbTresors(int joueur)
 	return moteur->getNbTresors(joueur);
 }
 
+bool Facade::getTransporteTresor(int joueur)
+{
+	return moteur->getTransporteTresor(joueur);
+}
+
 int Facade::getXPort(int joueur)
 {
 	return moteur->getPosPort(joueur).first;
@@ -89,8 +99,24 @@ int Facade::getTypeCase(int x, int y)
 	return moteur->getTypeCase(x,y);
 }
 
-void Facade::initialiserTir(int angle, int puissance)
+void Facade::reglerTir(int angle, int puissance, int dirX, int dirY)
 {
+	moteur->reglerTir(angle,puissance,make_pair(dirX,dirY));
+}
+
+bool Facade::getResTir()
+{
+	return moteur->getResTir();
+}
+
+int Facade::getAngleMax()
+{
+	return PUISSANCEMAX;
+}
+
+int Facade::getPuissanceMax()
+{
+	return ANGLEMAX;
 }
 
 int Facade::getDe1()
@@ -143,6 +169,11 @@ bool Facade::dispoChoixCase()
 bool Facade::dispoReglageTir()
 {
 	return moteur->dispoReglageTir();
+}
+
+bool Facade::getRamasseTresor()
+{
+	return moteur->getRamasseTresor();
 }
 
 EXTERNC DLL Facade*   Facade_New(){

@@ -16,10 +16,25 @@ Tir::Tir(Moteur* m) : State(m) {
 	direction.second = 0;
 	angle = 0;
 	puissance = 0;
+	srand ( time(NULL) );
 }
 
 void Tir::gerer()
 {
+	int resLancer = rand() % 2;
+	if(resLancer==1)
+	{
+		Joueur* j = joueurVise();
+		j->recevoirTir();
+		moteur->setResTir(true);
+	}
+	else
+	{
+		moteur->setResTir(false);
+	}
+
+	moteur->joueurSuivant();
+	moteur->setEtatCourant(LANCER_DE);
 }
 
 void Tir::reglerTir(int p, int a, pair<int,int> c) {
@@ -36,7 +51,7 @@ void Tir::reglerTir(int p, int a, pair<int,int> c) {
 }
 
 pair<int,int> Tir::tirer() {
-	pair<int,int> impact = calculerTir();
+	/*pair<int,int> impact = calculerTir();
 	//gérer les conséquences du tir et le changement d'état ICI
 	//recherche du joueur touché
 	//changement de bateau, transfert du trésor
@@ -48,16 +63,16 @@ pair<int,int> Tir::tirer() {
 			bateauTrouve = i;
 		}
 		i++;
-	}
+	}*/
 	/*if (moteur->getJoueur(i)->recevoirTir()) {
 		moteur->getJoueurCourant()->donnerSonTresor();
 	}*/
-	moteur->joueurSuivant();
-	moteur->setEtatCourant(DEPLACEMENT_BATEAU);
+
+
 	//gérer la situation où le bateau qui tire a déjà un trésor
 	//imaginer une conception où l'échange de trésor se passe entièrement dans la classe joueur
-	return impact;
-	//return make_pair(0,0);
+	//return impact;
+	return make_pair(0,0);
 }
 
 pair<int,int> Tir::calculerTir() { //to be completed
@@ -65,4 +80,15 @@ pair<int,int> Tir::calculerTir() { //to be completed
 	res.first = 0;
 	res.second = 0;
 	return res;
+}
+
+Joueur* Tir::joueurVise()
+{
+	for(int i=0; i<moteur->getNbJoueurs() ; i++)
+	{
+		Joueur* j = moteur->getJoueur(i);
+		if (j->getPosBateau() == direction)
+			return j;
+	}
+	return NULL;
 }

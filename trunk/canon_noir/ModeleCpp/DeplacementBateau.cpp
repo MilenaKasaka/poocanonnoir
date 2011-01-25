@@ -15,7 +15,16 @@ DeplacementBateau::DeplacementBateau(Moteur* m) : State(m)
 
 void DeplacementBateau::gerer()
 {
-	moteur->setCasesAccessibles(casesAccessibles());
+	vector<Case> caseAcc = casesAccessibles();
+	if (caseAcc.empty())
+	{
+		moteur->setEtatCourant(LANCER_DE);
+	}
+	else
+	{
+		moteur->setCasesAccessibles(caseAcc);
+	}
+	//moteur->setCasesAccessibles(casesAccessibles());
 }
 
 /*vector< pair<int,int> > DeplacementBateau::casesBateaux()

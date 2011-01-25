@@ -21,6 +21,11 @@ public :
 		Facade_Delete(f);
 	}
 
+	bool getJeuFini()
+	{
+		return f->getJeuFini();
+	}
+
 	int getNbLignes()
 	{
 		return f->getNbLignes();
@@ -71,6 +76,11 @@ public :
 		return f->getNbTresors(joueur);
 	}
 
+	bool getTransporteTresor(int joueur)
+	{
+		return f->getTransporteTresor(joueur);
+	}
+
 	int getXPort(int joueur)
 	{
 		return f->getXPort(joueur);
@@ -86,9 +96,24 @@ public :
 		return ((int)f->getTypeCase(x,y));
 	}
 
-	void initialiserTir(int angle, int puissance)
+	void reglerTir(int angle, int puissance, int dirX, int dirY)
 	{
-		f->initialiserTir(angle,puissance);
+		f->reglerTir(angle,puissance,dirX,dirY);
+	}
+
+	bool getResTir()
+	{
+		return f->getResTir();
+	}
+
+	int getAngleMax()
+	{
+		return f->getAngleMax();
+	}
+
+	int getPuissanceMax()
+	{
+		return f->getPuissanceMax();
 	}
 
 	int getDe1()
@@ -139,6 +164,11 @@ public :
 	bool dispoReglageTir()
 	{
 		return f->dispoReglageTir();
+	}
+
+	bool getRamasseTresor()
+	{
+		return f->getRamasseTresor();
 	}
 
 	protected:

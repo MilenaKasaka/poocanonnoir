@@ -18,6 +18,10 @@
 
 using namespace std;
 
+/**
+* \class Map
+* \brief Contient l'ensemble des cases, permet d'effectuer des opérations sur ces cases et d'y accéder
+*/
 class Map
 {
 	private :

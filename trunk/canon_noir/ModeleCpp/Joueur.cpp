@@ -57,9 +57,16 @@ bool Joueur::ramenerTresor()
 		return false;
 }
 
+bool Joueur::getTransporteTresor()
+{
+	return bateaux[bateauCourant].getTransporteTresor();
+}
+
 void Joueur::recevoirTir()
 {
 	bateaux[bateauCourant].retrograderType();
+	bateaux[bateauCourant].enleverTresor();
+	bateaux[bateauCourant].setPosition(getPosPort().first, getPosPort().second);
 }
 
 

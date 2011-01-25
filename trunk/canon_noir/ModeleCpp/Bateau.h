@@ -18,7 +18,7 @@ using namespace std;
 /**
 * \class Bateau
 * \brief Representation d'un bateau
-* Le bateau est defini par une position, un type et peut contenir un tresor
+* Le bateau est defini par une position, un type, un port de depart et peut contenir un tresor
 */
 class Bateau
 {
@@ -41,9 +41,12 @@ class Bateau
 		void retrograderType();
 		pair<int,int> getPosition();
 		pair<int,int> getPosPort();
+		bool getTransporteTresor() const;
 
 }; 
 
+// TESTER LE PORT
 inline pair<int,int> Bateau::getPosPort() { return posPort; }
+inline bool Bateau::getTransporteTresor() const { return tresor; }
 
 #endif
