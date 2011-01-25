@@ -71,7 +71,8 @@ pair<int,int> Tir::calculerTir() { //to be completed
 	list<pair<double,double> > intersections;
 	list<pair<double,double> > histogramme;
 	liste<pair<int,int> > casesTraversees;
-	list<pair<double,double> >::iterator it, it2, end;
+	list<pair<double,double> >::iterator it, end;
+	list<pair<int,int> >::iterator it2;
 	double h, l, xa, ya, xb, yb;
 	unsigned int x, y, i, j;
 	int x, y, i, j;
