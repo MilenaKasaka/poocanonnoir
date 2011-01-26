@@ -153,6 +153,7 @@ pair<int,int> Tir::calculerTir() { //to be completed
 		h = it->second;
 		d = it->first;
 		it++;
+		it2++;
 		
 		for(; it != end && !collision; it++, it2++) {
 			if(this->z(d) || this->z(d) <= it->second) {
