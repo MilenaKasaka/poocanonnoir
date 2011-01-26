@@ -21,8 +21,22 @@
 #define PUISSANCEMAX 10
 #define ANGLEMAX 5
 
+/**
+* \enum TypeEtat
+* \brief Etats du jeu
+*/
 typedef enum {ATTENTE_NB_JOUEURS, CHOIX_COULEUR, LANCER_DE, DEPLACEMENT_BATEAU, TIR_CASE_CANON, TIR_BORDURE} TypeEtat;
+
+/**
+* \enum TypeEtat
+* \brief Les trois types de bateaux
+*/
 typedef enum {CARAVELLE, FREGATE, RADEAU}  TypeBateau;
+
+/**
+* \enum TypeEtat
+* \brief Les différentes sortes de cases
+*/
 typedef enum {EAU, ILE, CANON, TRESOR} TypeCase;
 
 #endif

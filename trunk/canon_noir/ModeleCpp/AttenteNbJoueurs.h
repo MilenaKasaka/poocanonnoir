@@ -17,10 +17,19 @@
 */
 class AttenteNbJoueurs : public State
 {
-	private :
-
 	public :
+		/**
+		* \fn AttenteNbJoueurs(Moteur* m)
+		* \brief Construit un état AttenteNbJoueurs en lui passant l'instance de Moteur
+		* \param[in] m instance de Moteur
+		*/
 		AttenteNbJoueurs(Moteur* m);
+
+		/**
+		* \fn gerer()
+		* \brief Permet de gérer l'attente du choix du nombre de joueurs.
+		* Dans cette version, cette méthode ne fait rien.
+		*/
 		void gerer();
 
 };
