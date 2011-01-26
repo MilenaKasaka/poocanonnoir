@@ -164,6 +164,20 @@
     <Resource Include="images\ra4.png" />
     <Resource Include="images\ra4_vise.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cara1_courant.png" />
+    <Resource Include="images\cara2_courant.png" />
+    <Resource Include="images\cara3_courant.png" />
+    <Resource Include="images\cara4_courant.png" />
+    <Resource Include="images\fre1_courant.png" />
+    <Resource Include="images\fre2_courant.png" />
+    <Resource Include="images\fre3_courant.png" />
+    <Resource Include="images\fre4_courant.png" />
+    <Resource Include="images\ra1_courant.png" />
+    <Resource Include="images\ra2_courant.png" />
+    <Resource Include="images\ra3_courant.png" />
+    <Resource Include="images\ra4_courant.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

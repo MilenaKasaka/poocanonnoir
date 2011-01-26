@@ -23,15 +23,34 @@ using namespace std;
 class DeplacementBateau : public State
 {
 	private :
-		bool caseBonneDistance(pair<int,int> cooCase); // retourne vrai si la case est a la bonne distance par rapport au joueur
-		// retourne la liste des cases sur lesquelles il y a un bateau
-		//vector <pair<int,int> > casesBateaux();
-		// retourne la liste des cases accessibles a l'utilisateur en fonction de son bateau et de son lancer de des
+
+		/**
+		* \fn bool caseBonneDistance(pair<int,int> cooCase)
+		* \brief Vérifie que la case est a la bonne distance par rapport au joueur
+		* \param[in] cooCase coordonnées de la case dont on veut vérifier qu'elle est à la bonne distance par rapport au joueur
+		* \return vrai si la case est a la bonne distance par rapport au joueur, faux sinon
+		*/
+		bool caseBonneDistance(pair<int,int> cooCase);
+
+		/**
+		* \fn vector<Case> casesAccessibles()
+		* \brief retourne la liste des cases accessibles au joueur en fonction de son bateau et de son lancer de des
+		* \return liste des cases accessibles au joueur
+		*/
 		vector<Case> casesAccessibles();
 
 	public :
-
+		/**
+		* \fn DeplacementBateau(Moteur* m)
+		* \brief Construit un état DeplacementBateau en lui passant l'instance de Moteur
+		* \param[in] m instance de Moteur
+		*/
 		DeplacementBateau(Moteur* m);
+
+		/**
+		* \fn void gerer()
+		* \brief Transmet au moteur les cases accessibles à l'utilisateur
+		*/
 		void gerer();
 
 };

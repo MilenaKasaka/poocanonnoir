@@ -51,7 +51,11 @@ void Joueur::donnerSonTresor()
 
 bool Joueur::ramenerTresor()
 {
-	nbTresorPort++;
+	if (bateaux[bateauCourant].getTransporteTresor())
+	{
+		nbTresorPort++;
+		bateaux[bateauCourant].enleverTresor();
+	}
 	if (nbTresorPort == NB_TRESORS_GAGNANT)
 		return true;
 	else

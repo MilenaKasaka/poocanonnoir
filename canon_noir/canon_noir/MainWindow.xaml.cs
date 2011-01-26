@@ -104,6 +104,10 @@ namespace canon_noir
                 int posY = moteur.getYBateau(i);
                 //Console.WriteLine("X = " + posX + " - Y= " + posY);
                 // EVITER QU'UN BATEAU PUISSE SE VISER LUI-MEME
+
+                string courant = "";
+                if (i == moteur.getJoueurCourant())
+                    courant = "_courant";
                 
 
                 switch (typeb)
@@ -112,19 +116,19 @@ namespace canon_noir
                         if (moteur.dispoReglageTir() && i!=moteur.getJoueurCourant())
                             tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara" + (i+1) + "_vise.png", UriKind.RelativeOrAbsolute));
                         else
-                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara" + (i+1) +".png", UriKind.RelativeOrAbsolute));
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/cara" + (i+1) + courant + ".png", UriKind.RelativeOrAbsolute));
                         break;
                     case (int)TypeBateau.FREGATE :
                         if (moteur.dispoReglageTir() && i != moteur.getJoueurCourant())
                             tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/fre" + (i + 1) + "_vise.png", UriKind.RelativeOrAbsolute));
                         else
-                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/fre" + (i + 1) + ".png", UriKind.RelativeOrAbsolute));
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/fre" + (i + 1) + courant +  ".png", UriKind.RelativeOrAbsolute));
                         break;
                     case (int)TypeBateau.RADEAU :
                         if (moteur.dispoReglageTir() && i != moteur.getJoueurCourant())
                             tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/ra" + (i + 1) + "_vise.png", UriKind.RelativeOrAbsolute));
                         else
-                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/ra" + (i + 1) + ".png", UriKind.RelativeOrAbsolute));
+                            tabImg[posX, posY].Source = new BitmapImage(new Uri("/images/ra" + (i + 1) + courant + ".png", UriKind.RelativeOrAbsolute));
                         break;
                     default :
                         break;
@@ -211,6 +215,7 @@ namespace canon_noir
             if (!moteur.dispoLancerDe())
                 btn_Des.IsEnabled = false;
             initInfosPartie();
+            initBateaux();
             if (moteur.dispoChoixCase())
             {
                 moteur.execute();
@@ -250,7 +255,7 @@ namespace canon_noir
                         MessageBox.Show("Retour au port !");
                         initInfosPartie();
                     }
-                    if (moteur.getRamasseTresor())
+                    if (moteur.getRamasseTresor() && moteur.getTypeBateau(moteur.getJoueurCourant()) != ((int)TypeBateau.RADEAU) )
                     {
                         MessageBox.Show("Bravo joueur " + (sauv_joueurCourant + 1) + " ! Vous avez trouvé un trésor.");
                         initInfosPartie();

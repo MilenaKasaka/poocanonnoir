@@ -13,13 +13,30 @@
 
 /**
 * \class ChoixCouleur
-* \brief Etat qui correspond a l'attente du choix de la couleur pour chaque joueur
+* \brief Etat correspondant au choix de la couleur de son port par chacun des joueurs
+* (PAS UTILISE DANS CETTE VERSION DU JEU)
 */
 class ChoixCouleur : public State
 {
 public:
+	/**
+	* \fn ChoixCouleur(Moteur* m)
+	* \brief Construit un état ChoixCouleur en lui passant l'instance de Moteur
+	* \param[in] m instance de Moteur
+	*/
 	ChoixCouleur(Moteur* m);
+
+	/**
+	* \fn ~ChoixCouleur()
+	* \brief Permet de détruire un objet ChoixCouleur
+	*/
 	~ChoixCouleur();
+
+	/**
+	* \fn void gerer()
+	* \brief Permet de gérer le choix de la couleur du port pour chacun des joueurs
+	* (NE FAIT RIEN DANS CETTE VERSION DU JEU)
+	*/
 	void gerer();
 };
 

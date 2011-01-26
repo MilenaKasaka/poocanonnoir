@@ -13,7 +13,7 @@ Case::Case() : type(EAU) , nbTresor(0), altitude(0)
 {
 }
 
-Case::Case(TypeCase t, int n) : type(t) , nbTresor(n)
+Case::Case(TypeCase t, int n) : type(t) , nbTresor(n), altitude(0)
 {
 	if (t == TRESOR)
 		nbTresor = 4;

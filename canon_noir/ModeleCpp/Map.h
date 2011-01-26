@@ -25,19 +25,49 @@ using namespace std;
 class Map
 {
 	private :
-		vector<Case> cases;
+		vector<Case> cases; /*!< Liste des cases du plateau */
 
 
 	public :
+		/**
+		* \fn Map()
+		* \brief Construit le plateau du jeu.
+		* Initialise la largeur, la hauteur et les différents types de cases
+		*/
 		Map();
+
+		/**
+		* \fn vector<Case>* getCases()
+		* \brief Permet d'obtenir la liste des cases du plateau
+		* \return vector<Case>* - pointeur vers la liste des cases du plateau
+		*/
 		vector<Case>* getCases();
+
+		/**
+		* \fn Case* getCase(int x, int y)
+		* \brief Permet d'obtenir la case dont les coordonnées sont passées en paramètre
+		* \param[in] x abscisse de la case
+		* \param[in] y ordonnée de la case
+		* \return Case* - pointeur vers la case dont les coordonnées sont passées en paramètre
+		*/
 		Case* getCase(int x, int y);
+
+		/**
+		* \fn TypeCase getTypeCase(int x, int y)
+		* \brief Permet d'obtenir le type de la case dont les coordonnées sont passées en paramètre
+		* \param[in] x abscisse de la case
+		* \param[in] y ordonnée de la case
+		* \return TypeCase - type de la case dont les coordonnées sont passées en paramètre
+		*/
 		TypeCase getTypeCase(int x, int y);
-		// Retourne la liste des cases sur lesquelles il y a un bateau
 };
 
 inline vector<Case>* Map::getCases() { return &cases; }
 
+/**
+* \class coo_find
+* \brief Foncteur pour retrouver une case grace à ses coordonnées
+*/
 class coo_find { // objet fonction de type prédicat
 pair<int,int> coo;
 public:
